@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#244d40"><meta name="description" content="一个记录花销与生活灵感的个人空间"><title>日常 · 我的个人空间</title><meta name="referrer" content="no-referrer"><style>
+:root{--bg:#f7f8f4;--paper:#fff;--ink:#253b32;--muted:#859087;--green:#244d40;--line:#e8ece5;--pale:#eef3e9}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;background:none;color:inherit}button,input,select,textarea{outline-offset:4px}button:focus-visible{outline:2px solid #83a16d}button:hover{filter:brightness(.95)}[hidden]{display:none!important}.sidebar{width:238px;position:fixed;inset:0 auto 0 0;background:#f0f2eb;border-right:1px solid #e5e8de;padding:38px 25px;display:flex;flex-direction:column}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink);font-size:23px;font-weight:700;letter-spacing:2px}.brand-icon{font-size:22px;color:#fff;background:var(--green);width:43px;height:45px;display:grid;place-items:center;border-radius:13px 13px 13px 2px}.brand div span{display:block;font-size:8px;letter-spacing:1.4px;color:#859087;margin-top:5px}.nav-label{font-size:11px;color:#9aa193;letter-spacing:2px;margin:58px 14px 18px}nav button{display:flex;align-items:center;gap:13px;width:100%;padding:15px 17px;margin-bottom:9px;border-radius:8px;text-align:left;color:#758173}nav button.active{background:#e0e7d7;color:#31523b;font-weight:600}nav button>span{font-size:21px}nav small{margin-left:auto;font-weight:400}.side-bottom{margin-top:auto;padding:30px 10px 0}.plant{font-size:64px;color:#83976e;line-height:1.2}.side-bottom h3{font-size:13px;margin-top:22px}.side-bottom p{font-size:11px;color:#90988a;line-height:2}.side-bottom button{padding:12px 0;margin:17px 0;border-top:1px solid #dfe4d8;width:100%;text-align:left;font-size:12px}.local-badge{font-size:10px;color:#8a9780}main{margin-left:238px;padding:0 46px;max-width:1800px}header{height:83px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font-size:12px;color:#8b9689}.private-label{font-size:11px}.page-heading{display:flex;justify-content:space-between;align-items:center;margin:39px 0 28px}.eyebrow{font-size:9px;letter-spacing:2px;color:#95a18b}h1{font-size:29px;margin:12px 0 0;font-weight:600;letter-spacing:1px}h1 span{display:block;font-size:12px;font-weight:400;color:#8b9586;margin-top:12px;letter-spacing:.4px}.primary{background:var(--green);color:#fff;padding:13px 22px;border-radius:7px;font-size:13px}.stats{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:19px}.stat{border:1px solid var(--line);background:#fff;border-radius:11px;padding:23px 27px}.stat>div{font-size:12px;color:#88917f;display:flex;justify-content:space-between}.stat strong{font-size:31px;letter-spacing:-.5px;display:block;font-family:Georgia,"Microsoft YaHei",serif;font-weight:400;margin-top:18px}.stat p{font-size:10px;color:#99a08f;margin:15px 0 0}.stat.featured{background:var(--green);border-color:var(--green);color:#fff;position:relative;overflow:hidden}.stat.featured:after{content:"";width:160px;height:160px;border:1px solid #ffffff12;border-radius:100%;position:absolute;right:-70px;top:38px;box-shadow:0 0 0 25px #ffffff05,0 0 0 50px #ffffff04}.featured>div,.featured p{color:#c1d0bd}.section-heading{display:flex;justify-content:space-between;align-items:center;margin:32px 0 18px}h2{font-size:17px;font-weight:600;margin:0}h3{font-size:13px;font-weight:600;margin:0}.section-heading p{font-size:11px;color:#969f90;margin-bottom:0}.month-picker{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px}.month-picker button{font-size:22px;padding:0 10px}.month-picker input{border:0;font-size:12px;color:#52634e;max-width:135px;padding:4px;background:transparent}.analytics{display:grid;grid-template-columns:1.6fr 1fr;gap:19px}.panel{background:#fff;border:1px solid var(--line);border-radius:11px;padding:23px}.panel-title{display:flex;justify-content:space-between;align-items:center;gap:15px}.panel-title>span{font-size:10px;color:#9aa38f}.chart{height:144px;display:flex;align-items:stretch;gap:4px;padding-top:26px;background:repeating-linear-gradient(to top,transparent 0,transparent 42px,#f3f5ee 43px,#f3f5ee 44px)}.bar-slot{flex:1;display:flex;align-items:flex-end;min-width:0}.bar{width:100%;background:#aec09a;border-radius:3px 3px 0 0;min-height:2px}.bar-slot:hover .bar{background:var(--green)}.chart-axis{display:flex;justify-content:space-between;font-size:9px;color:#a2aa9a;padding-top:10px}.category-row{display:grid;grid-template-columns:26px 1fr auto;gap:9px;align-items:center;margin-top:16px;font-size:11px}.category-icon{background:#f0f3e9;width:26px;height:26px;border-radius:7px;display:grid;place-items:center}.category-track{height:4px;background:#f0f3ea;border-radius:4px;margin-top:7px;overflow:hidden}.category-track div{height:100%;background:#9dae89}.category-row small{font-size:9px;color:#95a18c}.categories{min-height:240px}.category-empty{color:#a0a893;font-size:12px;text-align:center;padding:54px 0}.transactions{margin-top:22px;padding-bottom:0}.transactions small{font-size:10px;color:#98a28f;font-weight:400;margin-left:8px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters input,.filters select{font-size:11px;padding:8px;border:1px solid var(--line);border-radius:5px;color:#74806c;background:#fff;max-width:135px}.text-button{font-size:11px;color:#7d8e72}table{width:100%;border-collapse:collapse;font-size:12px;margin-top:20px}th{text-align:left;color:#929e88;font-size:10px;font-weight:400;background:#f8faf5;padding:12px}td{padding:16px 12px;border-bottom:1px solid #f0f2ec}.amount{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.actions{text-align:right;width:100px}.actions button{font-size:11px;padding:5px}.record-description{color:#9aa390;margin-left:10px;font-size:11px;overflow-wrap:anywhere}.day-group{font-size:10px;color:#89947f}.empty{text-align:center;padding:36px 10px;color:#9aa38f}.empty>span{font-size:36px;color:#a1b193}.empty h3{font-size:13px;color:#718365;margin:14px 0 10px}.empty p{font-size:11px;line-height:1.9}.soft{padding:11px 15px;border-radius:6px;color:#557347;background:#eef3e6;font-size:12px}.empty button{margin-top:8px}.table-footer{font-size:11px;color:#8e9b83;padding:16px 0;text-align:right}.notes-layout{display:grid;grid-template-columns:270px 1fr;gap:20px;min-height:560px}.note-sidebar{padding:16px}.note-sidebar>input{width:100%;background:#f5f7f1;border:0;border-radius:6px;padding:12px;font-size:12px;margin-bottom:14px}.note-card{display:block;width:100%;text-align:left;padding:16px 12px;border-radius:7px;margin:5px 0}.note-card.active{background:#edf2e5}.note-card strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.note-card p{font-size:11px;color:#9aa38f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.note-card small{font-size:9px;color:#a3ab9b}.editor-toolbar{display:flex;justify-content:space-between;color:#9aa38f;font-size:10px}.editor input{border:0;width:100%;font-size:24px;font-weight:600;padding:25px 0 20px;color:var(--ink);background:transparent}.editor textarea{resize:vertical;width:100%;min-height:370px;border:0;font-size:14px;line-height:2;color:#5e6d56;background:transparent}.editor #word-count{text-align:right;font-size:10px;color:#a3ab9b}.danger{color:#a56f5d}footer{padding:30px 0;text-align:center;font-size:10px;letter-spacing:1px;color:#a8af9e}footer span{margin:0 10px}dialog{border:1px solid var(--line);border-radius:16px;padding:30px;width:460px;max-width:calc(100% - 28px);color:var(--ink);box-shadow:0 20px 100px #142b2520}dialog::backdrop{background:#1c302c55;backdrop-filter:blur(3px)}.dialog-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}.dialog-heading h2{margin-top:8px}.close{font-size:26px;color:#93a087}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{display:block;font-size:12px;margin-top:20px;color:#7b8870}label input,label select{display:block;width:100%;border:1px solid #e0e6d9;border-radius:7px;padding:12px;margin-top:9px;background:#fcfdf9;color:var(--ink)}#expense-amount{font-size:30px}.form-help{font-size:10px;color:#9aa38f;line-height:1.9;margin-top:20px}.full{width:100%;margin-top:10px}#backup-dialog>p{font-size:12px;line-height:1.9;color:#86927b}.backup-actions{display:grid;gap:12px;margin:23px 0}.import-label{text-align:center;border:1px dashed #a4b093;border-radius:7px;padding:15px;margin:0;cursor:pointer}.import-label input{font-size:11px}.confirm-buttons{display:flex;gap:10px;justify-content:flex-end;margin-top:25px}#confirm-text{font-size:12px;color:#8c9782;line-height:1.8}#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:8px;box-shadow:0 5px 20px #0001;font-size:12px;display:none;z-index:10}.table-wrap{overflow:auto}
+@media(min-width:1500px){main{padding:0 65px}.chart{height:180px}}@media(max-width:1100px){.sidebar{width:190px;padding:30px 18px}main{margin-left:190px;padding:0 25px}.stat{padding:20px}.filters{max-width:340px}.analytics{grid-template-columns:1.3fr 1fr}.stats{gap:12px}.stat strong{font-size:27px}}@media(max-width:760px){.sidebar{position:static;width:100%;padding:18px 20px;display:block;border-right:0;border-bottom:1px solid var(--line)}.brand{font-size:19px}.brand-icon{width:35px;height:37px}.brand div span{font-size:7px}.nav-label,.side-bottom{display:none}nav{display:flex;gap:10px;margin-top:20px}nav button{width:auto;flex:1;margin:0;padding:10px 14px;font-size:12px}nav button>span{font-size:17px}main{margin:0;padding:0 18px}header{height:53px;font-size:10px}.private-label{font-size:9px}.page-heading{margin:28px 0 23px}.eyebrow{font-size:7px;letter-spacing:1.5px}h1{font-size:25px}h1 span{font-size:10px}.primary{padding:12px 16px;font-size:12px}.stats{grid-template-columns:1fr 1fr;gap:10px}.stat.featured{grid-column:1/-1;padding:20px}.stat{padding:17px}.stat>div{font-size:11px}.stat strong{font-size:27px;margin-top:14px}.stat p{font-size:9px}.analytics{grid-template-columns:1fr}.categories{min-height:150px}.category-empty{padding:30px 0}.section-heading p{font-size:9px}.section-heading h2{font-size:15px}.month-picker{padding:3px}.month-picker input{max-width:120px;font-size:11px}.panel{padding:18px}.transactions .panel-title{align-items:flex-start;flex-direction:column}.filters{max-width:none;gap:5px}.filters input{max-width:130px}.filters select{max-width:100px}.record-description{display:block;margin:5px 0 0}.actions{width:82px}.actions button{font-size:10px;padding:4px}.notes-layout{grid-template-columns:1fr;gap:12px}.note-sidebar{max-height:240px;overflow:auto}.editor textarea{min-height:320px}footer{font-size:8px}.stat.featured strong{font-size:34px}}
+
+
+.welcome-panel{background:#e9eedf;border:1px solid #e0e6d6;border-radius:14px;padding:42px;display:flex;justify-content:space-between;align-items:center;overflow:hidden}.welcome-panel h2{font-size:35px;line-height:1.6;font-weight:500;letter-spacing:3px;margin:18px 0}.welcome-panel p{font-size:12px;color:#89977b;margin-bottom:28px}.orbit-art{width:220px;height:220px;border:1px solid #b9c7aa;border-radius:50%;display:grid;place-items:center;position:relative;margin:0 40px}.orbit-art:before{content:'';position:absolute;inset:22px -23px;border:1px solid #b9c7aa;border-radius:50%;transform:rotate(-40deg)}.orbit-art>span{font-size:140px;line-height:1;color:#82996f}.orbit-art b{position:absolute;bottom:-17px;background:#e9eedf;padding:10px;letter-spacing:5px;font-size:10px;font-weight:400}.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.home-link{text-align:left;transition:transform .2s}.home-link:hover{transform:translateY(-3px)}.home-link>span{font-size:28px;color:#7f956f;display:block;margin-bottom:18px}.home-link h2{font-size:16px}.home-link p{font-size:12px;color:#98a18d;line-height:1.8}.home-link small{font-size:10px;color:#758964;display:block;margin-top:25px}.home-bottom{display:flex;justify-content:space-between;padding:25px 0;font-size:10px;color:#9aa58e}.sidebar .nav-label{margin-top:38px}.sidebar nav button{padding:12px 15px}.side-bottom{padding-top:14px}.side-bottom .plant{font-size:48px}.space-filters{display:flex;gap:12px;margin-bottom:24px}.space-filters input,.space-filters select{padding:12px 15px;border:1px solid var(--line);border-radius:7px;color:#77866b;background:white;font-size:12px}.space-filters input{width:310px;max-width:65%}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;min-height:300px}.space-card{display:flex;flex-direction:column;min-height:240px}.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}.tool-monogram{width:42px;height:42px;border-radius:11px;background:#edf2e4;color:#74905d;display:grid;place-items:center;font-size:22px}.tag{background:#f1f4ec;color:#879578;border-radius:4px;padding:5px 8px;font-size:9px}.space-card h2{font-size:16px;overflow-wrap:anywhere}.space-card>p{white-space:pre-wrap;font-size:12px;color:#93a084;line-height:1.9;overflow-wrap:anywhere;max-height:210px;overflow:auto}.card-bottom{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:10px;color:#a4ac9a}.card-bottom a{color:#527043;text-decoration:none}.card-bottom button{font-size:10px;padding:4px}.space-empty{grid-column:1/-1;text-align:center;padding:70px 20px;align-self:start}.space-empty>span{display:block;font-size:50px;color:#a1b58c;margin-bottom:22px}.space-empty p{font-size:12px;color:#9ba58e;line-height:1.8}.assistant-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:22px}.profile-avatar{display:grid;place-items:center;background:#edf2e4;width:65px;height:65px;border-radius:50%;font-size:25px;color:#789367;margin-bottom:22px}.profile-panel h2{font-size:20px}.profile-panel>p{font-size:12px;line-height:1.9;color:#98a28c;white-space:pre-wrap}.profile-panel h3{margin-top:30px;border-top:1px solid var(--line);padding-top:20px}.profile-text{font-size:12px;line-height:2;color:#859578;white-space:pre-wrap;margin-top:14px;overflow-wrap:anywhere}.chat-info{font-size:10px;color:#95a587;line-height:1.9;background:#f7f9f2;border-radius:6px;padding:10px}#chat-log{height:340px;overflow:auto;padding:10px 0;display:flex;flex-direction:column;gap:16px}.chat-message{white-space:pre-wrap;font-size:12px;line-height:1.9;max-width:90%;border-radius:9px;padding:12px 16px;overflow-wrap:anywhere;flex-shrink:0}.chat-message.bot{background:#f1f5e9;color:#70835f;align-self:flex-start}.chat-message.user{background:var(--green);color:#fff;align-self:flex-end}.suggestions{display:flex;gap:10px;margin:15px 0}.suggestions button{border:1px solid #e3e9d9;border-radius:20px;padding:7px 12px;font-size:10px;color:#8c9d7b}#chat-form{display:flex;gap:10px}#chat-input{width:100%;min-width:0;border:1px solid var(--line);border-radius:7px;padding:12px;font-size:12px}#chat-form button{white-space:nowrap}dialog textarea{display:block;width:100%;border:1px solid #e0e6d9;border-radius:7px;padding:12px;background:#fcfdf9;color:var(--ink);min-height:100px;margin-top:9px;resize:vertical;font-size:12px;line-height:1.8}#profile-dialog{max-height:90vh;overflow:auto}.brand{cursor:pointer}@media(max-width:1100px){.card-grid{grid-template-columns:1fr 1fr}.orbit-art{width:150px;height:150px;margin:0 10px}.orbit-art>span{font-size:100px}.welcome-panel{padding:30px}.welcome-panel h2{font-size:29px}.assistant-layout{grid-template-columns:1fr}}@media(max-width:760px){nav{flex-wrap:wrap;gap:4px}nav button{flex:0 1 calc(33.33% - 4px);font-size:11px!important;padding:10px 7px!important;gap:6px}.sidebar .nav-label{display:none}.orbit-art{display:none}.welcome-panel{padding:27px}.welcome-panel h2{font-size:27px}.welcome-panel p{font-size:10px}.home-grid{gap:12px}.home-link{padding:18px}.home-link h2{font-size:13px}.home-link p{font-size:10px}.card-grid{grid-template-columns:1fr}.home-bottom{font-size:9px;gap:12px}.assistant-layout{grid-template-columns:1fr}.chat-panel .panel-title{gap:5px;flex-wrap:wrap}.page-heading .soft{font-size:10px;padding:10px}.home-link>span{font-size:23px}.space-filters{gap:8px}.space-filters input,.space-filters select{padding:10px;font-size:11px}}
+.sidebar{overflow-y:auto}.space-card{min-width:0}
+
+#vault-screen{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at top,#e5eddb,var(--bg) 70%)}.vault-card{width:450px;max-width:100%;padding:35px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 25px 90px #244d4010}.vault-card .brand-icon{margin-bottom:24px}.vault-card h1{font-size:25px}.vault-card>p{font-size:12px;color:#85937a;line-height:1.9}.vault-card .eyebrow{margin:20px 0}.vault-card input{font-size:16px}#vault-error{color:#a25848;line-height:1.8;min-height:22px;font-size:12px;margin-top:16px}.vault-details{margin-top:20px;border-top:1px solid var(--line);padding-top:16px;font-size:10px;color:#89977d;line-height:1.9}.vault-strip{display:flex;gap:12px;align-items:center;justify-content:flex-end;padding:10px 0;color:#829374;font-size:10px;flex-wrap:wrap}.vault-strip button{font-size:11px}.vault-warning{font-size:11px;line-height:1.8;padding:12px;background:#fff1d9;color:#89622e}#migration-report{white-space:pre-wrap;font-family:monospace;font-size:11px;line-height:1.8;overflow-wrap:anywhere}.sidebar{min-height:0}dialog{max-height:90dvh;overflow:auto}input,select,textarea{max-width:100%}.filters{min-width:0}.amount{font-family:Arial,sans-serif}#vault-screen[hidden]{display:none}body{overflow-wrap:break-word}.notes-layout{min-width:0}.editor{min-width:0}@media(max-width:760px){.vault-card{padding:26px}.vault-strip{justify-content:space-between}.page-heading{gap:12px}.page-heading .primary{white-space:nowrap}.filters{width:100%}.filters input{min-width:0}.table-wrap{max-width:100%}.actions{min-width:90px}.private-label{display:none}}@media(min-width:761px) and (max-height:850px){.side-bottom .plant{display:none}.side-bottom h3{margin-top:4px}.sidebar{padding-top:22px}.nav-label{margin-top:25px!important}}
+#daily-app nav button{white-space:nowrap}#daily-app .sidebar{scrollbar-width:thin}@media(min-width:761px) and (max-width:1100px){#daily-app nav button{font-size:12px;gap:8px;padding-left:12px;padding-right:12px}}
+</style></head>
+<body><div id="vault-screen"><section class="vault-card"><span class="brand-icon">日</span><div class="eyebrow">MY PERSONAL SPACE · INDEPENDENT EDITION</div><h1 id="vault-heading">我的私人空间</h1><p>口令只用于本地加密，不使用 ChatGPT 登录，不上传账本或笔记。</p><form id="vault-form"><label>保险箱口令<input type="password" id="vault-password" minlength="12" maxlength="256" autocomplete="current-password" required></label><label id="vault-repeat-label">再次输入口令<input type="password" id="vault-repeat" maxlength="256" autocomplete="new-password"></label><div id="vault-error" role="alert"></div><button class="primary full" id="vault-submit">进入空间</button></form><div class="vault-details">首次使用请设置至少 12 个字符的口令，并安全保管。口令无法找回；忘记口令只能使用你仍能解密的备份恢复。10 分钟无操作会自动锁定。<br>离线文件请固定保存位置；更换域名、文件路径或浏览器后，需要导入备份。<br>若已有备份，请先设置本设备口令，再进入「数据与备份」导入。</div></section></div><div id="daily-app" hidden>
+<aside class="sidebar"><a class="brand" href="#"><span class="brand-icon">日</span><div>日常<span>MY PERSONAL SPACE</span></div></a><div class="nav-label">我的空间</div><nav><button data-view="ledger" class="active"><span>▦</span>生活账本</button><button data-view="notes"><span>▤</span>记事本 <small id="note-count">0</small></button></nav><div class="side-bottom"><div class="plant">✳</div><h3>把日子，慢慢记下来。</h3><p>每一笔花销，每一个想法，<br>都是生活的小小切片。</p><button id="backup-button">↗ 数据与备份</button><span class="local-badge">● 数据在本浏览器中加密保存</span></div></aside>
+<main><header><span id="today-label"></span><span class="private-label">◉ 本地加密空间</span></header><div class="vault-strip"><span id="vault-status"></span><button id="change-password">更换口令</button><button id="lock-vault">锁定空间 ↗</button></div><div class="vault-warning" id="conflict-warning" hidden>其他标签页已修改数据。请备份当前内容后刷新，再解锁继续编辑。</div><div class="vault-warning" id="legacy-warning" hidden>检测到同域名旧版明文数据，已复制到加密保险箱。旧明文副本未删除；导出并核对备份后，可在浏览器开发者工具中仅移除 daily-space-v1，勿清除整个网站数据。</div>
+<section id="ledger-view"><div class="page-heading"><div><div class="eyebrow">A LITTLE MORE MINDFUL, EVERY DAY</div><h1>生活账本<span>把花销记清，把生活过好。</span></h1></div><button class="primary" id="add-expense">＋ 记一笔</button></div>
+<div class="stats"><article class="stat featured"><div>今日支出 <span>↗</span></div><strong id="today-total">¥ 0.00</strong><p id="today-count">今天还没有记录，开始记下第一笔吧</p></article><article class="stat"><div>本月支出 <span>▦</span></div><strong id="month-total">¥ 0.00</strong><p id="month-count">本月共 0 笔支出</p></article><article class="stat"><div>本月日均 <span>☀</span></div><strong id="average-total">¥ 0.00</strong><p>按本月已过天数计算</p></article></div>
+<div class="section-heading"><div><h2>支出概览</h2><p>每一天的记录，汇成生活的轨迹。</p></div><div class="month-picker"><button id="previous-month" aria-label="上个月">‹</button><input id="selected-month" type="month" aria-label="选择统计月份"><button id="next-month" aria-label="下个月">›</button></div></div>
+<div class="analytics"><article class="panel trend"><div class="panel-title"><h3>每日花销</h3><span id="chart-caption"></span></div><div id="chart" class="chart"></div><div class="chart-axis"><span>1 日</span><span id="midday"></span><span id="lastday"></span></div></article><article class="panel categories"><div class="panel-title"><h3>分类占比</h3><span>支出分布</span></div><div id="category-list"></div></article></div>
+<article class="panel transactions"><div class="panel-title"><div><h3>支出明细 <small id="record-count">0 笔</small></h3></div><div class="filters"><input id="search" type="search" placeholder="搜索备注…" aria-label="搜索支出备注"><select id="category-filter" aria-label="按分类筛选"><option value="">全部分类</option></select><input id="date-filter" type="date" aria-label="筛选日期"><button class="text-button" id="clear-filters">重置</button></div></div><div class="table-wrap"><table><thead><tr><th>日期</th><th>分类 / 备注</th><th class="amount">金额</th><th class="actions">操作</th></tr></thead><tbody id="records"></tbody></table></div><div id="empty-ledger" class="empty"><span>▧</span><h3>让记录，从这一笔开始</h3><p>早餐、通勤，或是一杯咖啡。<br>记下小小花销，慢慢了解自己的生活。</p><button class="soft" id="empty-add">＋ 添加第一笔支出</button></div><div class="table-footer" id="filtered-total"></div></article></section>
+<section id="notes-view" hidden><div class="page-heading"><div><div class="eyebrow">MAKE ROOM FOR YOUR THOUGHTS</div><h1>记事本<span>随手写下，生活里的小事。</span></h1></div><button class="primary" id="new-note">＋ 新建笔记</button></div><div class="notes-layout"><div class="panel note-sidebar"><input id="note-search" type="search" placeholder="搜索笔记…" aria-label="搜索笔记"><div id="note-list"></div></div><article class="panel editor"><div id="note-placeholder" class="empty"><span>✎</span><h3>留一点空间，给自己的想法</h3><p>新建一篇笔记，记录清单、灵感与日常。</p></div><div id="note-editor" hidden><div class="editor-toolbar"><span id="save-status">自动保存</span><button class="text-button danger" id="delete-note">删除笔记</button></div><input id="note-title" maxlength="120" placeholder="无标题笔记" aria-label="笔记标题"><textarea id="note-body" placeholder="从这里开始，写下此刻的想法…" aria-label="笔记内容"></textarea><div id="word-count"></div></div></article></div></section>
+<footer>日常 <span>·</span> 给生活一点秩序，也留一点自由。</footer></main>
+<dialog id="expense-dialog"><form id="expense-form"><div class="dialog-heading"><div><div class="eyebrow">LITTLE THINGS COUNT</div><h2 id="expense-title">记一笔支出</h2></div><button type="button" class="close" data-close="expense-dialog" aria-label="关闭">×</button></div><label>金额（元）<input id="expense-amount" type="number" min="0.01" max="99999999.99" step="0.01" placeholder="0.00" required></label><div class="form-grid"><label>日期<input id="expense-date" type="date" required></label><label>分类<select id="expense-category" required></select></label></div><label>备注<input id="expense-description" maxlength="200" placeholder="这笔钱花在了哪里？（选填）"></label><p class="form-help">保存后，日/月统计会自动更新。</p><button class="primary full" type="submit">保存这笔支出</button></form></dialog>
+<dialog id="backup-dialog"><div class="dialog-heading"><h2>数据与备份</h2><button class="close" data-close="backup-dialog" aria-label="关闭">×</button></div><p>账本和笔记保存在当前设备的当前浏览器，暂不跨设备同步。清除浏览器数据可能丢失记录，请定期导出备份。</p><div class="backup-actions"><button id="export-encrypted" class="primary">导出加密完整备份（推荐）</button><button id="export-json" class="primary">导出完整备份（JSON）</button><button id="export-csv" class="soft">导出账单（CSV）</button><label class="import-label">导入 JSON / 加密 JSON / CSV<input type="file" id="import-json" accept="application/json,.json,text/csv,.csv"></label></div><p class="form-help">导入会合并记录；相同 ID 的记录以备份为准。支持旧版 JSON、新版加密 JSON 和本网站账单 CSV。CSV 只恢复账单，每次导入会新增，请勿重复导入。明文备份请妥善保管。</p><div class="backup-actions"><button class="soft" id="audit-data">核对当前数据</button><button class="soft" id="export-audit">导出数据核对报告</button></div><pre id="migration-report"></pre></dialog>
+<dialog id="confirm-dialog"><h2 id="confirm-title">确认删除？</h2><p id="confirm-text"></p><div class="confirm-buttons"><button class="soft" id="confirm-cancel">取消</button><button class="primary" id="confirm-ok">确认</button></div></dialog><div id="toast" role="status" aria-live="polite"></div><dialog id="backup-password-dialog"><form id="backup-password-form"><h2>解密导入的备份</h2><label>这份备份原来的保险箱口令<input id="backup-password" type="password" autocomplete="off" required></label><p class="form-help">导入后会用当前设备的保险箱口令重新加密。</p><div class="confirm-buttons"><button type="button" class="soft" id="backup-password-cancel">取消</button><button class="primary">解密</button></div></form></dialog><dialog id="change-password-dialog"><form id="change-password-form"><h2>更换本地保险箱口令</h2><label>新口令（至少 12 字符）<input type="password" id="new-vault-password" minlength="12" maxlength="256" required></label><label>再次输入<input type="password" id="new-vault-repeat" maxlength="256" required></label><p class="form-help">旧加密备份仍需旧口令。修改后请重新导出加密备份。</p><div class="confirm-buttons"><button class="soft" type="button" data-close="change-password-dialog">取消</button><button class="primary">保存新口令</button></div></form></dialog></div><noscript>本网站需要启用 JavaScript。不会向任何服务器上传你的账本。</noscript><script>(function(root){
+const categories=['餐饮','交通','购物','居家','娱乐','医疗','学习','其他'];
+function validDate(d){if(typeof d!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(d)||d<'1900-01-01'||d>'9999-12-31')return false;const date=new Date(d+'T12:00:00Z');return !isNaN(date)&&date.toISOString().slice(0,10)===d}
+function cents(v){if(!/^\d+(\.\d{1,2})?$/.test(String(v)))throw Error('金额最多保留两位小数');const n=Math.round(Number(v)*100);if(!Number.isSafeInteger(n)||n<=0||n>9999999999)throw Error('请输入 0.01 至 99,999,999.99 元');return n}
+function validate(data){if(!data||data.version!==1||!Array.isArray(data.expenses)||!Array.isArray(data.notes)||data.expenses.length>100000||data.notes.length>10000)throw Error('备份格式不正确');const ids=new Set();for(const e of data.expenses){if(!e||typeof e.id!=='string'||!e.id||ids.has(e.id)||!validDate(e.date)||!Number.isSafeInteger(e.cents)||e.cents<=0||e.cents>9999999999||!categories.includes(e.category)||typeof e.description!=='string'||e.description.length>200)throw Error('账单数据无效');ids.add(e.id)}ids.clear();for(const n of data.notes){if(!n||typeof n.id!=='string'||!n.id||ids.has(n.id)||typeof n.title!=='string'||n.title.length>120||typeof n.body!=='string'||n.body.length>1000000||typeof n.updatedAt!=='string'||isNaN(Date.parse(n.updatedAt)))throw Error('笔记数据无效');ids.add(n.id)}return data}
+function sum(items){return items.reduce((s,e)=>s+e.cents,0)}
+function monthStats(items,month){const rows=items.filter(e=>e.date.startsWith(month+'-'));const days={};const groups={};for(const e of rows){days[e.date]=(days[e.date]||0)+e.cents;groups[e.category]=(groups[e.category]||0)+e.cents}return {total:sum(rows),days,groups,rows}}
+const api={categories,validDate,cents,validate,sum,monthStats};root.DailyCore=api;if(typeof module!=='undefined')module.exports=api;
+})(globalThis);
+
+(function(root){
+'use strict';const C=root.DailyCore||require('./core.js');
+function validUrl(s){try{return ['https:','http:'].includes(new URL(s).protocol)}catch{return false}}
+function validate(data){C.validate(data);if(data.space){const v=data.space;if(!Array.isArray(v.tools)||!Array.isArray(v.projects)||v.tools.length>10000||v.projects.length>10000||!v.profile)throw Error('个人空间格式错误');for(const type of ['tools','projects']){const ids=new Set();for(const x of v[type]){if(!x||typeof x.id!=='string'||!x.id||ids.has(x.id)||typeof x.title!=='string'||x.title.length>120||typeof x.description!=='string'||x.description.length>10000||typeof x.url!=='string'||(x.url&&!validUrl(x.url)))throw Error('工具或项目无效');ids.add(x.id);if(type==='tools'&&(typeof x.category!=='string'||x.category.length>60))throw Error('工具分类无效');if(type==='projects'&&!['想法','进行中','已上线','已归档'].includes(x.status))throw Error('项目状态无效')}}for(const k of ['name','bio','experience','works'])if(typeof v.profile[k]!=='string'||v.profile[k].length>20000)throw Error('个人资料无效')}return data}
+function merge(current,incoming){validate(current);validate(incoming);const next=structuredClone(current);for(const type of ['expenses','notes']){const map=new Map(next[type].map(x=>[x.id,x]));incoming[type].forEach(x=>map.set(x.id,structuredClone(x)));next[type]=[...map.values()]}if(incoming.space)next.space=structuredClone(incoming.space);return validate(next)}
+function fingerprint(data){validate(data);const sorted=structuredClone(data);for(const k of ['expenses','notes'])sorted[k].sort((a,b)=>a.id.localeCompare(b.id));if(sorted.space)for(const k of ['tools','projects'])sorted.space[k].sort((a,b)=>a.id.localeCompare(b.id));const stable=v=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().filter(k=>!['readError'].includes(k)).map(k=>[k,stable(v[k])])):v;return JSON.stringify(stable(sorted))}
+async function audit(data){const text=fingerprint(data),hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return {expenses:data.expenses.length,notes:data.notes.length,tools:data.space?.tools.length||0,projects:data.space?.projects.length||0,totalCents:C.sum(data.expenses),sha256:Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('')}}
+function csv(data){validate(data);const cell=v=>'"'+String(v).replace(/"/g,'""')+'"';const safe=v=>/^\s*[=+@\-\t\r]/.test(v)?"'"+v:v;return '\uFEFF'+[['日期','分类','金额（元）','备注'],...data.expenses.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(e=>[e.date,e.category,(e.cents/100).toFixed(2),safe(e.description)])].map(r=>r.map(cell).join(',')).join('\r\n')}
+/* CSV is intentionally bills-only; JSON remains the complete backup format. */
+function parseCsv(text){text=text.replace(/^\uFEFF/,'');const rows=[];let row=[],value='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){value+='"';i++}else if(!quoted&&value!=='')throw Error('CSV 引号格式错误');else quoted=!quoted}else if(c===','&&!quoted){row.push(value);value=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(value);if(row.some(Boolean))rows.push(row);row=[];value=''}else value+=c}if(quoted)throw Error('CSV 引号未闭合');row.push(value);if(row.some(Boolean))rows.push(row);if(rows.shift()?.join('|')!=='日期|分类|金额（元）|备注')throw Error('仅支持本网站导出的 CSV 表头');const expenses=rows.map((r,i)=>{if(r.length!==4)throw Error('CSV 第 '+(i+2)+' 行列数错误');return {id:'csv-'+(crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+i),date:r[0],category:r[1],cents:C.cents(r[2]),description:r[3].startsWith("'")&&/^\s*[=+@\-\t\r]/.test(r[3].slice(1))?r[3].slice(1):r[3]}});return validate({version:1,expenses,notes:[]})}
+root.DailyData={validate,merge,audit,csv,parseCsv,fingerprint};if(typeof module!=='undefined')module.exports=root.DailyData;
+})(globalThis);
+
+/* Web Crypto only; no dependencies, passwords, or private data embedded. */
+(function(root){
+'use strict';
+const enc=new TextEncoder(),dec=new TextDecoder(),iterations=600000;
+function b64(bytes){let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(s)}
+function unb64(s){if(typeof s!=='string'||s.length>40000000)throw Error('加密备份格式无效');return Uint8Array.from(atob(s),c=>c.charCodeAt(0))}
+async function derive(password,salt,rounds=iterations){return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:rounds,hash:'SHA-256'},await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveKey']),{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function encrypt(data,key,salt){const iv=crypto.getRandomValues(new Uint8Array(12)),aad=enc.encode('daily-space-vault:1');const ciphertext=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv,additionalData:aad},key,enc.encode(JSON.stringify(data))));return {format:'daily-space-vault',version:1,kdf:'PBKDF2-SHA256',iterations,salt:b64(salt),iv:b64(iv),ciphertext:b64(ciphertext)}}
+function check(v){if(!v||v.format!=='daily-space-vault'||v.version!==1||v.kdf!=='PBKDF2-SHA256'||v.iterations!==iterations)throw Error('不支持的加密备份格式');if(unb64(v.salt).length!==16||unb64(v.iv).length!==12||unb64(v.ciphertext).length<16)throw Error('加密备份已损坏');return v}
+async function decryptWithKey(v, key) {
+  check(v);
+  const bytes = await crypto.subtle.decrypt({
+    name: 'AES-GCM', iv: unb64(v.iv), additionalData: enc.encode('daily-space-vault:1'),
+  }, key, unb64(v.ciphertext));
+  return {data: JSON.parse(dec.decode(bytes)), key, salt: unb64(v.salt)};
+}
+async function decrypt(v, password) {
+  check(v);
+  const key = await derive(password, unb64(v.salt), v.iterations);
+  try {
+    return await decryptWithKey(v, key);
+  } catch {
+    throw Error('口令错误，或加密数据已损坏。原数据不会被覆盖。');
+  }
+}
+async function create(data, password, minimumLength = 12) {
+  if (typeof password !== 'string' || password.length < minimumLength) {
+    throw Error(minimumLength === 1 ? '请输入保险箱口令' : `请使用至少 ${minimumLength} 个字符的独立口令`);
+  }
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const key = await derive(password, salt);
+  return {envelope: await encrypt(data, key, salt), key, salt};
+}
+root.DailyCrypto={encrypt,decrypt,decryptWithKey,create,check};if(typeof module!=='undefined')module.exports=root.DailyCrypto;
+})(globalThis);
+
+/* Persist the browser's non-exportable key, with a fixed expiry per unlock. */
+const RememberedUnlock = (() => {
+  const lifetime = 10 * 24 * 60 * 60 * 1000;
+  const slot = location.protocol === 'file:' ? location.pathname : 'vault';
+
+  function openDatabase() {
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open('daily-space-unlock-v1', 1);
+      request.onupgradeneeded = () => request.result.createObjectStore('unlocks');
+      request.onerror = () => reject(request.error);
+      request.onblocked = () => reject(Error('浏览器无法打开免输凭据存储'));
+      request.onsuccess = () => resolve(request.result);
+    });
+  }
+
+  async function access(mode, operation) {
+    const db = await openDatabase();
+    try {
+      return await new Promise((resolve, reject) => {
+        const transaction = db.transaction('unlocks', mode);
+        const request = operation(transaction.objectStore('unlocks'), slot);
+        transaction.oncomplete = () => resolve(request.result);
+        transaction.onabort = () => reject(transaction.error || Error('免输凭据操作未完成'));
+      });
+    } finally {
+      db.close();
+    }
+  }
+
+  const forget = () => access('readwrite', (store, id) => store.delete(id));
+
+  async function remember(key, salt) {
+    const issuedAt = Date.now();
+    const expiresAt = issuedAt + lifetime;
+    await access('readwrite', (store, id) => store.put({ key, salt, issuedAt, expiresAt }, id));
+    return expiresAt;
+  }
+
+  async function read(salt) {
+    const record = await access('readonly', (store, id) => store.get(id));
+    if (!record) return null;
+    const now = Date.now();
+    if (record.salt !== salt || !Number.isFinite(record.issuedAt) ||
+        record.expiresAt !== record.issuedAt + lifetime || now < record.issuedAt || now >= record.expiresAt) {
+      await forget();
+      return null;
+    }
+    return record;
+  }
+
+  return { remember, read, forget };
+})();
+
+const VaultUI = (() => {
+  'use strict';
+  const keyName = 'daily-space-encrypted-v1';
+  let key, salt, knownRaw = null;
+  let queue = Promise.resolve(), pending = 0;
+  let lastActivity = Date.now(), rememberedUntil = 0;
+  let rememberOnDevice = false, started = false, locking = false;
+  const el = id => document.getElementById(id);
+
+  function status(text) {
+    el('vault-status').textContent = text;
+  }
+
+  function showRememberedStatus() {
+    const notice = el('vault-remember-status');
+    if (!rememberOnDevice) return;
+    notice.textContent = rememberedUntil
+      ? '免输口令至 ' + new Date(rememberedUntil).toLocaleString('zh-CN')
+      : '浏览器未能保存免输凭据，下次需输入口令';
+    notice.hidden = false;
+  }
+
+  async function saveRememberedUnlock() {
+    if (!rememberOnDevice) return;
+    try {
+      rememberedUntil = await RememberedUnlock.remember(key, JSON.parse(knownRaw).salt);
+    } catch {
+      rememberedUntil = 0;
+    }
+    showRememberedStatus();
+  }
+
+  async function exclusive(fn) {
+    return navigator.locks ? navigator.locks.request('daily-space-encrypted-write', fn) : fn();
+  }
+
+  async function persist(data) {
+    const snapshot = structuredClone(data);
+    pending++;
+    status('正在加密保存…');
+    const task = queue.catch(() => {}).then(() => exclusive(async () => {
+      if (localStorage.getItem(keyName) !== knownRaw) {
+        throw Error('其他标签页已修改数据。请先导出当前备份，再刷新后解锁。');
+      }
+      DailyData.validate(snapshot);
+      const encrypted = await DailyCrypto.encrypt(snapshot, key, salt);
+      const raw = JSON.stringify(encrypted);
+      localStorage.setItem(keyName, raw);
+      knownRaw = raw;
+    }));
+    queue = task;
+    try {
+      await task;
+      status('● 已加密保存于此浏览器');
+    } catch (error) {
+      status('保存失败 · 请立即导出备份');
+      throw error;
+    } finally {
+      pending--;
+    }
+  }
+
+  async function lock() {
+    if (locking) return;
+    locking = true;
+    try {
+      await queue;
+    } catch {
+      alert('保存失败，请先导出备份再锁定。');
+      locking = false;
+      return;
+    }
+    if (rememberedUntil) {
+      try {
+        await RememberedUnlock.forget();
+      } catch {
+        alert('浏览器暂时无法清除免输凭据，锁定未完成。请重试。');
+        locking = false;
+        return;
+      }
+    }
+    location.reload();
+  }
+
+  async function init(launch, options = {}) {
+    rememberOnDevice = Boolean(options.rememberOnDevice);
+    const passwordInput = el('vault-password');
+    const repeatInput = el('vault-repeat');
+    const button = el('vault-submit');
+    const errorMessage = el('vault-error');
+    const minimumPasswordLength = passwordInput.minLength;
+
+    async function enter(initial) {
+      passwordInput.value = repeatInput.value = '';
+      await launch(initial);
+      el('vault-screen').hidden = true;
+      el('daily-app').hidden = false;
+      status('● 已加密保存于此浏览器');
+      showRememberedStatus();
+      started = true;
+      lastActivity = Date.now();
+    }
+
+    function checkLock() {
+      if (!started || locking) return;
+      if (rememberedUntil) {
+        if (Date.now() >= rememberedUntil) lock();
+      } else if (Date.now() - lastActivity > 10 * 60 * 1000) {
+        lock();
+      }
+    }
+
+    try {
+      knownRaw = localStorage.getItem(keyName);
+      const exists = knownRaw !== null;
+      el('vault-repeat-label').hidden = exists;
+      el('vault-heading').textContent = exists ? '解锁我的个人空间' : '创建私人数据保险箱';
+      button.textContent = exists ? '解锁空间' : '设置口令并进入';
+      const probe = 'daily-storage-test-' + Date.now();
+      localStorage.setItem(probe, '1');
+      localStorage.removeItem(probe);
+      if (exists) passwordInput.removeAttribute('minlength');
+    } catch {
+      errorMessage.textContent = '此浏览器禁止本地存储。请允许网站存储或使用其他浏览器。';
+      button.disabled = true;
+      return;
+    }
+
+    el('vault-form').onsubmit = async event => {
+      event.preventDefault();
+      if (button.disabled || started) return;
+      const password = passwordInput.value;
+      button.disabled = true;
+      errorMessage.textContent = '';
+      try {
+        if (!crypto.subtle) throw Error('当前浏览器不支持本地加密。请使用新版浏览器。');
+        knownRaw = localStorage.getItem(keyName);
+        let initial;
+        if (knownRaw) {
+          const opened = await DailyCrypto.decrypt(JSON.parse(knownRaw), password);
+          initial = DailyData.validate(opened.data);
+          key = opened.key;
+          salt = opened.salt;
+        } else {
+          if (password !== repeatInput.value) throw Error('两次口令不一致');
+          const legacy = localStorage.getItem('daily-space-v1');
+          initial = legacy ? DailyData.validate(JSON.parse(legacy)) : {version: 1, expenses: [], notes: []};
+          const created = await DailyCrypto.create(initial, password, minimumPasswordLength);
+          await exclusive(async () => {
+            if (localStorage.getItem(keyName) !== null) throw Error('另一个标签页刚创建了保险箱，请刷新后解锁');
+            const raw = JSON.stringify(created.envelope);
+            localStorage.setItem(keyName, raw);
+            knownRaw = raw;
+            key = created.key;
+            salt = created.salt;
+          });
+          if (legacy) el('legacy-warning').hidden = false;
+        }
+        await saveRememberedUnlock();
+        await enter(initial);
+      } catch (error) {
+        errorMessage.textContent = error.message;
+      } finally {
+        button.disabled = false;
+      }
+    };
+
+    el('lock-vault').onclick = lock;
+    for (const event of ['pointerdown', 'keydown', 'input']) {
+      document.addEventListener(event, () => { lastActivity = Date.now(); }, {passive: true});
+    }
+    window.addEventListener('focus', checkLock);
+    document.addEventListener('visibilitychange', checkLock);
+    setInterval(checkLock, 15000);
+    window.addEventListener('beforeunload', event => {
+      if (pending) {
+        event.preventDefault();
+        event.returnValue = '正在保存';
+      }
+    });
+    window.addEventListener('storage', event => {
+      if (key && event.key === keyName && event.newValue !== knownRaw) {
+        status('其他标签页已修改数据 · 请刷新解锁');
+        el('conflict-warning').hidden = false;
+      }
+    });
+
+    if (rememberOnDevice && knownRaw && crypto.subtle) {
+      button.disabled = true;
+      errorMessage.textContent = '正在检查本机免输凭据…';
+      try {
+        const envelope = JSON.parse(knownRaw);
+        const record = await RememberedUnlock.read(envelope.salt);
+        if (record) {
+          const opened = await DailyCrypto.decryptWithKey(envelope, record.key);
+          if (Date.now() < record.expiresAt && localStorage.getItem(keyName) === knownRaw) {
+            const initial = DailyData.validate(opened.data);
+            key = opened.key;
+            salt = opened.salt;
+            rememberedUntil = record.expiresAt;
+            await enter(initial);
+          }
+        }
+      } catch {
+        // If browser storage or the remembered key is unavailable, use the password form.
+      } finally {
+        errorMessage.textContent = '';
+        button.disabled = false;
+      }
+    }
+  }
+
+  async function readBackup(file) {
+    if (file.size > 20000000) throw Error('备份文件不能超过 20MB');
+    const text = await file.text();
+    if (file.name.toLowerCase().endsWith('.csv')) return DailyData.parseCsv(text);
+    let data = JSON.parse(text);
+    if (data.format === 'daily-space-vault') {
+      const password = await askPassword();
+      data = (await DailyCrypto.decrypt(data, password)).data;
+    }
+    return DailyData.validate(data);
+  }
+
+  function askPassword() {
+    return new Promise((resolve, reject) => {
+      const dialog = el('backup-password-dialog');
+      const input = el('backup-password');
+      input.value = '';
+      dialog.showModal();
+      el('backup-password-form').onsubmit = event => {
+        event.preventDefault();
+        const password = input.value;
+        input.value = '';
+        dialog.close();
+        resolve(password);
+      };
+      el('backup-password-cancel').onclick = () => {
+        input.value = '';
+        dialog.close();
+        reject(Error('已取消导入'));
+      };
+      dialog.oncancel = () => {
+        input.value = '';
+        reject(Error('已取消导入'));
+      };
+    });
+  }
+
+  async function rekey(data, password) {
+    await queue;
+    const created = await DailyCrypto.create(DailyData.validate(data), password, el('new-vault-password').minLength);
+    await exclusive(async () => {
+      if (localStorage.getItem(keyName) !== knownRaw) throw Error('其他标签页已修改数据，请先刷新');
+      const raw = JSON.stringify(created.envelope);
+      localStorage.setItem(keyName, raw);
+      knownRaw = raw;
+      key = created.key;
+      salt = created.salt;
+    });
+    await saveRememberedUnlock();
+    status('● 新口令已生效，请重新导出加密备份');
+  }
+
+  function encryptedBackup() {
+    if (!knownRaw) throw Error('请先保存数据');
+    return knownRaw;
+  }
+
+  return { init, persist, readBackup, encryptedBackup, rekey, lock, flush: () => queue, keyName };
+})();
+
+async function startApp(initialData){
+'use strict';
+const $=id=>document.getElementById(id), C=DailyCore;
+const icons={'餐饮':'♨','交通':'↗','购物':'▣','居家':'⌂','娱乐':'♫','医疗':'✚','学习':'▤','其他':'◇'};
+let state=structuredClone(initialData),editId=null,activeNote=null,selectedMonth=localDate().slice(0,7),confirmAction=null;
+function localDate(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function money(c){return '¥ '+(c/100).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function uid(){return crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2)}
+let toastTimer;function toast(t){$('toast').textContent=t;$('toast').style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(async()=>$('toast').style.display='none',3200)}
+async function commit(next){try{DailyData.validate(next);state=next;await VaultUI.persist(next);return true}catch(e){toast(e.message||'保存失败，请立即导出备份');return false}}
+let mutationQueue=Promise.resolve();function change(fn){const task=mutationQueue.then(async()=>{const next=structuredClone(state);fn(next);return commit(next)});mutationQueue=task.catch(async()=>{});return task}
+function confirmDo(title,text,fn){$('confirm-title').textContent=title;$('confirm-text').textContent=text;confirmAction=fn;$('confirm-dialog').showModal()}
+$('confirm-cancel').onclick=async()=>$('confirm-dialog').close();$('confirm-ok').onclick=async()=>{$('confirm-dialog').close();if(confirmAction)await confirmAction()};
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=async()=>$(b.dataset.close).close());
+function showView(view){document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!==view+'-view');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));if(view==='notes')renderNotes()}
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=async()=>showView(b.dataset.view));
+$('today-label').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});
+for(const cat of C.categories){$('expense-category').add(new Option(icons[cat]+' '+cat,cat));$('category-filter').add(new Option(cat,cat))}
+$('selected-month').value=selectedMonth;
+function renderLedger(){const today=localDate(), current=C.monthStats(state.expenses,today.slice(0,7)),todays=state.expenses.filter(e=>e.date===today);$('today-total').textContent=money(C.sum(todays));$('today-count').textContent=todays.length?`今天记录了 ${todays.length} 笔支出`:'今天还没有记录，开始记下第一笔吧';$('month-total').textContent=money(current.total);$('month-count').textContent=`本月共 ${current.rows.length} 笔支出`;$('average-total').textContent=money(Math.round(current.total/Number(today.slice(-2))));
+const stats=C.monthStats(state.expenses,selectedMonth),days=new Date(Number(selectedMonth.slice(0,4)),Number(selectedMonth.slice(5)),0).getDate(),max=Math.max(1,...Object.values(stats.days));$('chart-caption').textContent='当月合计 '+money(stats.total);$('chart').innerHTML=Array.from({length:days},(_,i)=>{const date=selectedMonth+'-'+String(i+1).padStart(2,'0'),n=stats.days[date]||0;return `<div class="bar-slot" title="${date}：${money(n)}" aria-label="${date}支出${money(n)}"><div class="bar" style="height:${n?Math.max(3,n/max*100):2}%;opacity:${n?1:.2}"></div></div>`}).join('');$('midday').textContent=Math.ceil(days/2)+' 日';$('lastday').textContent=days+' 日';$('category-list').innerHTML=Object.entries(stats.groups).sort((a,b)=>b[1]-a[1]).map(([cat,n])=>`<div class="category-row"><span class="category-icon">${icons[cat]}</span><div>${cat}<div class="category-track"><div style="width:${n/stats.total*100}%"></div></div></div><div>${money(n)}<br><small>${(n/stats.total*100).toFixed(1)}%</small></div></div>`).join('')||'<div class="category-empty">这个月还没有支出记录<br><br>记一笔，让生活的轮廓更清晰。</div>';
+const rows=stats.rows.filter(e=>(!$('category-filter').value||e.category===$('category-filter').value)&&(!$('date-filter').value||e.date===$('date-filter').value)&&e.description.toLowerCase().includes($('search').value.trim().toLowerCase())).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));$('record-count').textContent=rows.length+' 笔';$('records').innerHTML=rows.map(e=>`<tr><td class="day-group">${e.date}</td><td><span class="category-icon" style="display:inline-grid;margin-right:8px">${icons[e.category]}</span>${e.category}<span class="record-description">${esc(e.description)}</span></td><td class="amount">${money(e.cents)}</td><td class="actions"><button data-edit="${esc(e.id)}">修改</button><button class="danger" data-delete="${esc(e.id)}">删除</button></td></tr>`).join('');$('empty-ledger').hidden=rows.length>0;$('empty-ledger').querySelector('h3').textContent=stats.rows.length?'没有符合条件的记录':'让记录，从这一笔开始';$('filtered-total').textContent=rows.length?'当前列表合计 '+money(C.sum(rows)):'';document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=async()=>openExpense(b.dataset.edit));document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>confirmDo('删除这笔支出？','删除后将重新计算花销统计。',async()=>{if(await change(s=>s.expenses=s.expenses.filter(e=>e.id!==b.dataset.delete))){renderLedger();toast('已删除支出')}}));}
+function openExpense(id){editId=id||null;const e=state.expenses.find(e=>e.id===id);$('expense-title').textContent=e?'修改支出':'记一笔支出';$('expense-amount').value=e?(e.cents/100).toFixed(2):'';$('expense-date').value=e?e.date:localDate();$('expense-category').value=e?e.category:'餐饮';$('expense-description').value=e?e.description:'';$('expense-dialog').showModal();$('expense-amount').focus()}
+$('add-expense').onclick=$('empty-add').onclick=async()=>openExpense();$('expense-form').onsubmit=async event=>{event.preventDefault();try{const date=$('expense-date').value;if(!C.validDate(date))throw Error('请输入有效日期');const e={id:editId||uid(),date,cents:C.cents($('expense-amount').value),category:$('expense-category').value,description:$('expense-description').value.trim()};if(await change(s=>{const i=s.expenses.findIndex(x=>x.id===e.id);if(i<0)s.expenses.push(e);else s.expenses[i]=e})){selectedMonth=date.slice(0,7);$('selected-month').value=selectedMonth;$('expense-dialog').close();renderLedger();toast('已保存支出')}}catch(e){toast(e.message)}};
+function shiftMonth(delta){const [y,m]=selectedMonth.split('-').map(Number),d=new Date(y,m-1+delta,1);selectedMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;$('selected-month').value=selectedMonth;$('date-filter').value='';renderLedger()}
+$('previous-month').onclick=async()=>shiftMonth(-1);$('next-month').onclick=async()=>shiftMonth(1);$('selected-month').onchange=async()=>{if(/^\d{4}-\d{2}$/.test($('selected-month').value)){selectedMonth=$('selected-month').value;$('date-filter').value='';renderLedger()}};['category-filter','date-filter','search'].forEach(id=>$(id).oninput=renderLedger);$('clear-filters').onclick=async()=>{['category-filter','date-filter','search'].forEach(id=>$(id).value='');renderLedger()};
+function renderNotes(){const query=$('note-search').value.trim().toLowerCase();$('note-count').textContent=state.notes.length;const notes=state.notes.filter(n=>(n.title+' '+n.body).toLowerCase().includes(query)).sort((a,b)=>b.updatedAt.localeCompare(a.updatedAt));$('note-list').innerHTML=notes.map(n=>`<button class="note-card ${n.id===activeNote?'active':''}" data-note="${esc(n.id)}"><strong>${esc(n.title||'无标题笔记')}</strong><p>${esc(n.body.slice(0,70)||'还没有内容')}</p><small>${new Date(n.updatedAt).toLocaleString('zh-CN')}</small></button>`).join('')||'<div class="empty">暂无笔记</div>';document.querySelectorAll('[data-note]').forEach(b=>b.onclick=async()=>selectNote(b.dataset.note))}
+function selectNote(id){activeNote=id;const n=state.notes.find(n=>n.id===id);$('note-placeholder').hidden=!!n;$('note-editor').hidden=!n;if(n){$('note-title').value=n.title;$('note-body').value=n.body;$('word-count').textContent=n.body.length+' 字';$('save-status').textContent='已保存到此浏览器'}renderNotes()}
+$('new-note').onclick=async()=>{const n={id:uid(),title:'',body:'',updatedAt:new Date().toISOString()};if(await change(s=>s.notes.push(n))){selectNote(n.id);$('note-title').focus()}};
+async function saveNote(){const noteId=activeNote,title=$('note-title').value,body=$('note-body').value;if(await change(s=>{const n=s.notes.find(n=>n.id===noteId);if(n)Object.assign(n,{title,body,updatedAt:new Date().toISOString()})})){$('save-status').textContent='已自动保存';$('word-count').textContent=body.length+' 字';renderNotes()}else $('save-status').textContent='保存失败，请立即复制内容备份'}
+$('note-title').oninput=$('note-body').oninput=saveNote;$('note-search').oninput=renderNotes;$('delete-note').onclick=async()=>confirmDo('删除这篇笔记？','删除后无法恢复，请确认已备份重要内容。',async()=>{if(await change(s=>s.notes=s.notes.filter(n=>n.id!==activeNote)))selectNote(null)});
+function download(text,type,name){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(async()=>URL.revokeObjectURL(url),1000)}
+let lastDate=localDate();setInterval(async()=>{if(localDate()!==lastDate){lastDate=localDate();$('today-label').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});renderLedger()}},30000);
+renderLedger();renderNotes();
+
+const defaultSpace=()=>({tools:[],projects:[],profile:{name:'',bio:'',experience:'',works:''}});
+function validateSpace(v){if(!v||!Array.isArray(v.tools)||!Array.isArray(v.projects)||!v.profile)throw Error('个人空间数据格式错误');for(const key of ['tools','projects']){const ids=new Set();for(const x of v[key]){if(!x||typeof x.id!=='string'||!x.id||ids.has(x.id)||typeof x.title!=='string'||x.title.length>120||typeof x.description!=='string'||x.description.length>10000||typeof x.url!=='string'||(x.url&&!validUrl(x.url)))throw Error('工具或项目数据无效');ids.add(x.id);if(key==='tools'&&(typeof x.category!=='string'||x.category.length>60))throw Error('分类无效');if(key==='projects'&&!['想法','进行中','已上线','已归档'].includes(x.status))throw Error('项目状态无效')}}for(const k of ['name','bio','experience','works'])if(typeof v.profile[k]!=='string'||v.profile[k].length>20000)throw Error('个人资料无效');return v}
+function space(){return state.space||defaultSpace()}
+function validUrl(s){try{return ['https:','http:'].includes(new URL(s).protocol)}catch{return false}}
+const nav=document.querySelector('nav');nav.insertAdjacentHTML('afterbegin','<button data-view="home"><span>⌂</span>空间首页</button><button data-view="tools"><span>◇</span>工具导航</button><button data-view="projects"><span>◈</span>项目与想法</button><button data-view="assistant"><span>✳</span>关于我 · 助手</button>');
+const heading=(eyebrow,title,subtitle,button='')=>`<div class="page-heading"><div><div class="eyebrow">${eyebrow}</div><h1>${title}<span>${subtitle}</span></h1></div>${button}</div>`;
+const main=document.querySelector('main');
+main.insertAdjacentHTML('afterbegin',`<section id="home-view" hidden>${heading('A PLACE FOR EVERYTHING THAT MATTERS','我的日常空间','收好常用工具，安放想法，认真生活。')}<div class="welcome-panel"><div><span class="eyebrow">YOUR OWN LITTLE CORNER</span><h2>让灵感有去处，<br>让生活有记录。</h2><p>从一个小小的想法开始，慢慢搭建属于自己的世界。</p><button class="primary" data-go="projects">记录一个新想法 ↗</button></div><div class="orbit-art" aria-hidden="true"><span>✳</span><i></i><b>日 常</b></div></div><div class="home-grid"><button class="panel home-link" data-go="tools"><span>◇</span><h2>工具导航 ↗</h2><p>把好用的网站，放在触手可及的地方。</p><small id="home-tools"></small></button><button class="panel home-link" data-go="projects"><span>◈</span><h2>项目与创业想法 ↗</h2><p>从灵光一现，到一步步成为现实。</p><small id="home-projects"></small></button><button class="panel home-link" data-go="ledger"><span>▦</span><h2>生活账本 ↗</h2><p>每一笔小花销，都值得清楚记录。</p><small id="home-expenses"></small></button><button class="panel home-link" data-go="notes"><span>▤</span><h2>随手记事本 ↗</h2><p>待办、灵感、心情，随时写下来。</p><small id="home-notes"></small></button></div><div class="home-bottom"><span>✳ 一个持续生长的个人空间</span><button class="text-button" data-go="assistant">了解我 / 资料问答 →</button></div></section>
+<section id="tools-view" hidden>${heading('GOOD TOOLS, WITHIN REACH','工具导航','常用的、喜欢的，都在这里。','<button class="primary" id="add-tool">＋ 收藏工具</button>')}<div class="space-filters"><input id="tool-search" placeholder="搜索名称、描述或分类…" aria-label="搜索工具"><select id="tool-category" aria-label="筛选工具分类"><option value="">全部分类</option></select></div><div class="card-grid" id="tool-grid"></div></section>
+<section id="projects-view" hidden>${heading('SMALL IDEAS, REAL POSSIBILITIES','项目与想法','为创业灵感留个位置，也记录每一步进展。','<button class="primary" id="add-project">＋ 新建项目</button>')}<div class="space-filters"><input id="project-search" placeholder="搜索项目和想法…" aria-label="搜索项目"><select id="project-status" aria-label="筛选项目状态"><option value="">全部状态</option><option>想法</option><option>进行中</option><option>已上线</option><option>已归档</option></select></div><div class="card-grid" id="project-grid"></div></section>
+<section id="assistant-view" hidden>${heading('THE STORY BEHIND THE WORK','关于我 · 资料助手','用真实的经历和作品，介绍自己。','<button class="soft" id="edit-profile">✎ 编辑个人资料</button>')}<div class="assistant-layout"><article class="panel profile-panel"><div class="profile-avatar">我</div><h2 id="profile-name"></h2><p id="profile-bio"></p><h3>个人经历</h3><div id="profile-experience" class="profile-text"></div><h3>作品与成果</h3><div id="profile-works" class="profile-text"></div></article><article class="panel chat-panel"><div class="panel-title"><h3>✳ 关于我的资料问答</h3><span>本地检索 · 无 AI 模型</span></div><p class="chat-info">依据个人资料与项目关键词查找原文。仅在解锁后的本浏览器运行，不上传个人资料。</p><div id="chat-log" role="log" aria-live="polite"><div class="chat-message bot">你好！可以问我有关个人经历、作品或项目的问题。先在「编辑个人资料」里添加真实信息，我就能帮助查找。</div></div><div class="suggestions"><button data-question="有哪些个人经历？">个人经历</button><button data-question="有哪些作品和项目？">作品与项目</button></div><form id="chat-form"><input id="chat-input" placeholder="想了解什么？" maxlength="500" aria-label="问题" required><button class="primary">发送 ↑</button></form></article></div></section>`);
+document.body.insertAdjacentHTML('beforeend','<dialog id="item-dialog"><form id="item-form"><div class="dialog-heading"><h2 id="item-heading"></h2><button type="button" class="close" id="item-close" aria-label="关闭">×</button></div><label>名称<input id="item-title" maxlength="120" required></label><label id="item-category-label">分类<input id="item-category" maxlength="60" placeholder="例如：效率、设计、开发"></label><label id="item-status-label">项目状态<select id="item-status"><option>想法</option><option>进行中</option><option>已上线</option><option>已归档</option></select></label><label>网址（选填）<input id="item-url" type="url" placeholder="https://…"></label><label>描述 / 想法<textarea id="item-description" maxlength="10000" placeholder="用途、想解决的问题、下一步计划…"></textarea></label><button class="primary full">保存</button></form></dialog><dialog id="profile-dialog"><form id="profile-form"><div class="dialog-heading"><h2>编辑个人资料</h2><button class="close" type="button" id="profile-close" aria-label="关闭">×</button></div><p class="form-help">以下内容将作为本地资料助手的回答依据。</p><label>称呼<input id="profile-edit-name" maxlength="120"></label><label>个人介绍<textarea id="profile-edit-bio" maxlength="20000"></textarea></label><label>个人经历<textarea id="profile-edit-experience" maxlength="20000" placeholder="学习、工作、创业经历…"></textarea></label><label>作品与成果<textarea id="profile-edit-works" maxlength="20000" placeholder="作品名称、你的贡献、成果…"></textarea></label><button class="primary full">保存个人资料</button></form></dialog>');
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=async()=>{showView(b.dataset.view);renderSpace()});document.querySelectorAll('[data-go]').forEach(b=>b.onclick=async()=>{showView(b.dataset.go);renderSpace()});
+let itemType,itemId;
+function editItem(type,id){itemType=type;itemId=id;const item=space()[type].find(x=>x.id===id);$('item-heading').textContent=type==='tools'?(item?'编辑工具':'收藏工具'):(item?'编辑项目':'新建项目与想法');$('item-title').value=item?.title||'';$('item-url').value=item?.url||'';$('item-description').value=item?.description||'';$('item-category').value=item?.category||'';$('item-status').value=item?.status||'想法';$('item-category-label').hidden=type!=='tools';$('item-status-label').hidden=type!=='projects';$('item-dialog').showModal()}
+$('add-tool').onclick=async()=>editItem('tools');$('add-project').onclick=async()=>editItem('projects');$('item-close').onclick=async()=>$('item-dialog').close();$('item-form').onsubmit=async e=>{e.preventDefault();const url=$('item-url').value.trim(),title=$('item-title').value.trim();if(!title)return toast('请填写名称');if(url&&!validUrl(url))return toast('请使用 http 或 https 网址');const item={id:itemId||uid(),title,url,description:$('item-description').value.trim()};if(itemType==='tools')item.category=$('item-category').value.trim()||'未分类';else item.status=$('item-status').value;if(await change(s=>{s.space||=defaultSpace();const i=s.space[itemType].findIndex(x=>x.id===item.id);if(i<0)s.space[itemType].push(item);else s.space[itemType][i]=item})){$('item-dialog').close();renderSpace();toast('已保存')}};
+function renderSpace(){const s=space();$('home-tools').textContent=s.tools.length+' 个收藏';$('home-projects').textContent=s.projects.length+' 个项目与想法';$('home-expenses').textContent='今日支出 '+money(C.sum(state.expenses.filter(e=>e.date===localDate())));$('home-notes').textContent=state.notes.length+' 篇笔记';const selected=$('tool-category').value;$('tool-category').innerHTML='<option value="">全部分类</option>'+[...new Set(s.tools.map(x=>x.category))].map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');$('tool-category').value=selected;for(const type of ['tools','projects']){const isTool=type==='tools',search=$(isTool?'tool-search':'project-search').value.toLowerCase(),filter=$(isTool?'tool-category':'project-status').value;const rows=s[type].filter(x=>(x.title+' '+x.description+' '+(x.category||'')).toLowerCase().includes(search)&&(!filter||(isTool?x.category:x.status)===filter));$(isTool?'tool-grid':'project-grid').innerHTML=rows.map(x=>`<article class="panel space-card"><div class="card-top"><span class="tool-monogram">${esc(x.title.slice(0,1))}</span><span class="tag">${esc(isTool?x.category:x.status)}</span></div><h2>${esc(x.title)}</h2><p>${esc(x.description||'暂未填写描述')}</p><div class="card-bottom">${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${isTool?'打开工具':'查看项目'} ↗</a>`:'<span>留给下一个好想法</span>'}<div><button data-item-edit="${esc(x.id)}" data-type="${type}">编辑</button><button class="danger" data-item-delete="${esc(x.id)}" data-type="${type}">删除</button></div></div></article>`).join('')||`<div class="panel space-empty"><span>${isTool?'◇':'◈'}</span><h2>${s[type].length?'没有找到匹配的内容':isTool?'收藏你的第一个常用工具':'每个项目，都始于一个小想法'}</h2><p>${isTool?'点击右上角「收藏工具」，添加常用网站。':'点击右上角「新建项目」，写下问题、灵感和下一步。'}</p></div>`}document.querySelectorAll('[data-item-edit]').forEach(b=>b.onclick=async()=>editItem(b.dataset.type,b.dataset.itemEdit));document.querySelectorAll('[data-item-delete]').forEach(b=>b.onclick=async()=>confirmDo('删除这条记录？','这条记录将从个人空间移除。',async()=>{if(await change(s=>s.space[b.dataset.type]=s.space[b.dataset.type].filter(x=>x.id!==b.dataset.itemDelete)))renderSpace()}));$('profile-name').textContent=s.profile.name||'等待你的自我介绍';$('profile-bio').textContent=s.profile.bio||'还没有填写个人资料。点击「编辑个人资料」，让这个空间慢慢成为你的样子。';$('profile-experience').textContent=s.profile.experience||'尚未添加经历';$('profile-works').textContent=s.profile.works||'尚未添加作品'}
+for(const id of ['tool-search','tool-category','project-search','project-status'])$(id).oninput=renderSpace;
+$('edit-profile').onclick=async()=>{for(const k of ['name','bio','experience','works'])$('profile-edit-'+k).value=space().profile[k];$('profile-dialog').showModal()};$('profile-close').onclick=async()=>$('profile-dialog').close();$('profile-form').onsubmit=async e=>{e.preventDefault();if(await change(s=>{s.space||=defaultSpace();for(const k of ['name','bio','experience','works'])s.space.profile[k]=$('profile-edit-'+k).value.trim()})){$('profile-dialog').close();renderSpace();toast('个人资料已保存')}};
+function answer(q){const s=space(),p=s.profile,found=[];if(/你是谁|介绍|名字|称呼|关于/.test(q)){if(p.name||p.bio)found.push('【个人介绍】\n'+[p.name,p.bio].filter(Boolean).join('\n'))}if(/经历|工作|学习|教育|创业|背景/.test(q)&&p.experience)found.push('【个人经历】\n'+p.experience);if(/作品|成果|做过/.test(q)&&p.works)found.push('【作品与成果】\n'+p.works);if(/项目|作品|创业|想法/.test(q))for(const x of s.projects)found.push(`【项目资料：${x.title}】\n状态：${x.status}\n${x.description}${x.url?'\n'+x.url:''}`);if(!found.length){const terms=q.toLowerCase().match(/[a-z0-9]{2,}|[\u4e00-\u9fff]{2}/g)||[];for(const [name,text] of [['个人介绍',[p.name,p.bio].join('\n')],['个人经历',p.experience],['作品与成果',p.works],...s.projects.map(x=>['项目：'+x.title,x.title+'\n'+x.description])])if(text.trim()&&terms.some(t=>text.toLowerCase().includes(t)))found.push(`【${name}】\n${text}`)}return found.length?'在已填写资料中找到以下内容（原文摘录）：\n\n'+[...new Set(found)].join('\n\n'):'当前资料中没有找到相关信息。请先添加个人经历、作品或项目，或换一个更具体的关键词。我不会编造未填写的个人信息。'}
+function chat(q){const log=$('chat-log');for(const [cls,text] of [['user',q],['bot',answer(q)]]){const el=document.createElement('div');el.className='chat-message '+cls;el.textContent=text;log.append(el)}log.scrollTop=log.scrollHeight;$('chat-input').value=''}
+$('chat-form').onsubmit=async e=>{e.preventDefault();const q=$('chat-input').value.trim();if(q)chat(q)};document.querySelectorAll('[data-question]').forEach(b=>b.onclick=async()=>chat(b.dataset.question));
+main.prepend(document.querySelector('header'));document.querySelector('header').after(document.querySelector('.vault-strip'));document.querySelector('.vault-strip').after(document.getElementById('conflict-warning'),document.getElementById('legacy-warning'));
+document.querySelector('.brand').onclick=e=>{e.preventDefault();showView('home');renderSpace()};
+renderSpace();showView('home');
+
+$('backup-button').onclick=()=>$('backup-dialog').showModal();
+$('export-json').onclick=()=>confirmDo('导出明文完整备份？','JSON 包含全部账单、笔记及个人资料，请只存放在你信任的位置。加密备份更适合长期保存。',()=>download(JSON.stringify(state,null,2),'application/json',`日常完整备份-${localDate()}.json`));
+$('export-csv').onclick=()=>confirmDo('导出明文账单？','CSV 只包含账单，不包含笔记和个人资料；不能替代完整 JSON 备份。',()=>download(DailyData.csv(state),'text/csv;charset=utf-8',`日常账单-${localDate()}.csv`));
+$('export-encrypted').onclick=async()=>{try{await mutationQueue;await VaultUI.flush();download(VaultUI.encryptedBackup(),'application/json',`日常加密备份-${localDate()}.json`)}catch(e){toast('加密备份失败，请导出当前明文 JSON：'+e.message)}};
+$('import-json').onchange=async()=>{const file=$('import-json').files[0];$('import-json').value='';if(!file)return;try{const incoming=await VaultUI.readBackup(file),isCsv=file.name.toLowerCase().endsWith('.csv');const audit=await DailyData.audit(incoming);confirmDo('导入并核对这份备份？',`支出 ${audit.expenses} 笔，笔记 ${audit.notes} 篇，工具 ${audit.tools} 个，项目 ${audit.projects} 个。支出总额 ${money(audit.totalCents)}。${isCsv?'CSV 没有原始 ID，每次导入都会新增账单，请勿重复导入。':'同 ID 的支出与笔记以备份为准；个人空间资料如存在则整组替换。'}`,async()=>{let expected;if(await change(s=>{expected=DailyData.merge(s,incoming);Object.keys(s).forEach(k=>delete s[k]);Object.assign(s,expected)})){renderLedger();selectNote(null);renderSpace();const after=await DailyData.audit(state);$('migration-report').textContent=`导入完成并已加密保存。\n支出：${after.expenses} 笔；笔记：${after.notes} 篇\n工具：${after.tools} 个；项目：${after.projects} 个\n全部支出：${money(after.totalCents)}\n完整数据 SHA-256：\n${after.sha256}\n${DailyData.fingerprint(state)===DailyData.fingerprint(expected)?'内存数据与预期合并结果一致。':'数据已发生后续修改，请重新核对。'}`;toast('已导入并生成核对结果')}})}catch(e){toast('导入失败：'+e.message)}};
+$('audit-data').onclick=async()=>{const a=await DailyData.audit(state);$('migration-report').textContent=`支出 ${a.expenses} 笔；笔记 ${a.notes} 篇\n工具 ${a.tools} 个；项目 ${a.projects} 个\n总支出：${money(a.totalCents)}\n完整数据 SHA-256：\n${a.sha256}`};
+$('export-audit').onclick=async()=>download(JSON.stringify(await DailyData.audit(state),null,2),'application/json',`日常数据核对-${localDate()}.json`);
+$('change-password').onclick=()=>{$('new-vault-password').value=$('new-vault-repeat').value='';$('change-password-dialog').showModal()};
+$('change-password-form').onsubmit=async e=>{e.preventDefault();const pass=$('new-vault-password').value;if(pass!==$('new-vault-repeat').value)return toast('两次新口令不一致');try{await mutationQueue;await VaultUI.rekey(state,pass);$('new-vault-password').value=$('new-vault-repeat').value='';$('change-password-dialog').close();toast('保险箱口令已更换；旧备份仍使用旧口令')}catch(e){toast(e.message)}};
+
+}
+VaultUI.init(startApp);</script></body></html>
+
