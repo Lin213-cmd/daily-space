@@ -58,6 +58,78 @@
 #note-image-dialog { width: min(800px, calc(100% - 28px)); }
 #note-image-full { display: block; max-width: 100%; max-height: 65vh; object-fit: contain; margin-inline: auto; }
 
+.ledger-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.ledger-actions button { white-space: nowrap; }
+.ledger-spending { margin-top: 12px; }
+.ledger-spending .stat { padding: 12px; background: #f7f9f2; }
+.ledger-spending .stat strong { font-size: clamp(16px, 2.45vw, 27px); }
+.ledger-balance .stat strong { font-size: clamp(18px, 3vw, 32px); overflow-wrap: anywhere; }
+.income-amount { color: #28624c; font-weight: 700; }
+.negative-amount { color: #aa4a36; }
+.featured .negative-amount { color: #ffd0c4; }
+.period-balance {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;
+  padding: 12px 14px; margin-bottom: 14px; background: #edf2e9; border-radius: 12px;
+  color: #48594f; font-size: 12px;
+}
+.period-balance strong { display: block; margin-top: 5px; font-size: clamp(14px, 2.2vw, 20px); overflow-wrap: anywhere; }
+
+.section-note { color: #56675c; font-size: 13px; margin: 8px 0 0; }
+.reminder-panel { padding: 16px; }
+.reminder-add { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
+.reminder-add input {
+  min-width: 0; padding: 9px 12px; border: 1px solid #dae4da; border-radius: 9px;
+  font: inherit; font-size: 16px; color: #283831; background: #f8faf5;
+}
+.reminder-filters { display: flex; gap: 8px; margin: 14px 0 2px; }
+.reminder-filters button { padding: 7px 10px; border-radius: 7px; background: #f6f8f3; color: #495c50; white-space: nowrap; }
+.reminder-filters [aria-pressed="true"] { background: #dce9dd; color: #173b2e; font-weight: 700; }
+.reminder-list { margin: 0; padding: 0; list-style: none; }
+.reminder-row {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 8px;
+  align-items: center; min-height: 44px; border-bottom: 1px solid #e8ede5;
+}
+.reminder-check {
+  appearance: none; width: 25px; height: 25px; margin: 0;
+  border: 1px solid #749688; border-radius: 50%; color: white; background: #fff;
+  display: grid; place-items: center; cursor: pointer; font: inherit;
+}
+.reminder-check:checked { background: #345e50; border-color: #345e50; }
+.reminder-check:checked::after { content: '✓'; }
+.reminder-title {
+  appearance: none; display: block; min-width: 0; padding: 10px 0; border: 0; text-align: left;
+  font: inherit; font-size: 15px; color: #243b30; background: transparent;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;
+}
+.reminder-row time { color: #526b5e; font-size: 12px; white-space: nowrap; }
+.reminder-row .past-due { color: #ab4e3b; }
+.reminder-row.is-done .reminder-title { color: #66766b; text-decoration: line-through; }
+.collection-empty { padding: 18px 6px; color: #56675c; font-size: 14px; }
+#photo-wall-empty { padding: 22px; }
+.photo-wall-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(160px, 45%), 1fr)); gap: 12px;
+}
+.photo-wall-tile {
+  position: relative; display: block; width: 100%; padding: 0; border: 0;
+  overflow: hidden; border-radius: 9px; background: #edf2e9; cursor: zoom-in;
+}
+.photo-wall-tile img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.photo-wall-tile span {
+  position: absolute; inset: auto 0 0; padding: 7px 9px; color: #fff; background: #183228d9;
+  text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+#photo-wall-dialog { width: min(760px, calc(100% - 28px)); }
+#photo-wall-full { display: block; max-width: 100%; max-height: 61vh; object-fit: contain; margin-inline: auto; }
+@media(max-width: 550px) {
+  .ledger-spending { gap: 6px; }
+  .ledger-spending .stat { padding: 8px; }
+  .ledger-balance { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .ledger-balance .featured { grid-column: 1 / -1; }
+  .photo-wall-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .reminder-row { column-gap: 5px; grid-template-columns: 28px minmax(0, 1fr) auto; }
+  .reminder-row time { font-size: 11px; }
+}
+
 .welcome-panel{background:#e9eedf;border:1px solid #e0e6d6;border-radius:14px;padding:42px;display:flex;justify-content:space-between;align-items:center;overflow:hidden}.welcome-panel h2{font-size:35px;line-height:1.6;font-weight:500;letter-spacing:3px;margin:18px 0}.welcome-panel p{font-size:12px;color:#89977b;margin-bottom:28px}.orbit-art{width:220px;height:220px;border:1px solid #b9c7aa;border-radius:50%;display:grid;place-items:center;position:relative;margin:0 40px}.orbit-art:before{content:'';position:absolute;inset:22px -23px;border:1px solid #b9c7aa;border-radius:50%;transform:rotate(-40deg)}.orbit-art>span{font-size:140px;line-height:1;color:#82996f}.orbit-art b{position:absolute;bottom:-17px;background:#e9eedf;padding:10px;letter-spacing:5px;font-size:10px;font-weight:400}.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.home-link{text-align:left;transition:transform .2s}.home-link:hover{transform:translateY(-3px)}.home-link>span{font-size:28px;color:#7f956f;display:block;margin-bottom:18px}.home-link h2{font-size:16px}.home-link p{font-size:12px;color:#98a18d;line-height:1.8}.home-link small{font-size:10px;color:#758964;display:block;margin-top:25px}.home-bottom{display:flex;justify-content:space-between;padding:25px 0;font-size:10px;color:#9aa58e}.sidebar .nav-label{margin-top:38px}.sidebar nav button{padding:12px 15px}.side-bottom{padding-top:14px}.side-bottom .plant{font-size:48px}.space-filters{display:flex;gap:12px;margin-bottom:24px}.space-filters input,.space-filters select{padding:12px 15px;border:1px solid var(--line);border-radius:7px;color:#77866b;background:white;font-size:12px}.space-filters input{width:310px;max-width:65%}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;min-height:300px}.space-card{display:flex;flex-direction:column;min-height:240px}.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}.tool-monogram{width:42px;height:42px;border-radius:11px;background:#edf2e4;color:#74905d;display:grid;place-items:center;font-size:22px}.tag{background:#f1f4ec;color:#879578;border-radius:4px;padding:5px 8px;font-size:9px}.space-card h2{font-size:16px;overflow-wrap:anywhere}.space-card>p{white-space:pre-wrap;font-size:12px;color:#93a084;line-height:1.9;overflow-wrap:anywhere;max-height:210px;overflow:auto}.card-bottom{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:10px;color:#a4ac9a}.card-bottom a{color:#527043;text-decoration:none}.card-bottom button{font-size:10px;padding:4px}.space-empty{grid-column:1/-1;text-align:center;padding:70px 20px;align-self:start}.space-empty>span{display:block;font-size:50px;color:#a1b58c;margin-bottom:22px}.space-empty p{font-size:12px;color:#9ba58e;line-height:1.8}.assistant-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:22px}.profile-avatar{display:grid;place-items:center;background:#edf2e4;width:65px;height:65px;border-radius:50%;font-size:25px;color:#789367;margin-bottom:22px}.profile-panel h2{font-size:20px}.profile-panel>p{font-size:12px;line-height:1.9;color:#98a28c;white-space:pre-wrap}.profile-panel h3{margin-top:30px;border-top:1px solid var(--line);padding-top:20px}.profile-text{font-size:12px;line-height:2;color:#859578;white-space:pre-wrap;margin-top:14px;overflow-wrap:anywhere}.chat-info{font-size:10px;color:#95a587;line-height:1.9;background:#f7f9f2;border-radius:6px;padding:10px}#chat-log{height:340px;overflow:auto;padding:10px 0;display:flex;flex-direction:column;gap:16px}.chat-message{white-space:pre-wrap;font-size:12px;line-height:1.9;max-width:90%;border-radius:9px;padding:12px 16px;overflow-wrap:anywhere;flex-shrink:0}.chat-message.bot{background:#f1f5e9;color:#70835f;align-self:flex-start}.chat-message.user{background:var(--green);color:#fff;align-self:flex-end}.suggestions{display:flex;gap:10px;margin:15px 0}.suggestions button{border:1px solid #e3e9d9;border-radius:20px;padding:7px 12px;font-size:10px;color:#8c9d7b}#chat-form{display:flex;gap:10px}#chat-input{width:100%;min-width:0;border:1px solid var(--line);border-radius:7px;padding:12px;font-size:12px}#chat-form button{white-space:nowrap}dialog textarea{display:block;width:100%;border:1px solid #e0e6d9;border-radius:7px;padding:12px;background:#fcfdf9;color:var(--ink);min-height:100px;margin-top:9px;resize:vertical;font-size:12px;line-height:1.8}#profile-dialog{max-height:90vh;overflow:auto}.brand{cursor:pointer}@media(max-width:1100px){.card-grid{grid-template-columns:1fr 1fr}.orbit-art{width:150px;height:150px;margin:0 10px}.orbit-art>span{font-size:100px}.welcome-panel{padding:30px}.welcome-panel h2{font-size:29px}.assistant-layout{grid-template-columns:1fr}}@media(max-width:760px){nav{flex-wrap:wrap;gap:4px}nav button{flex:0 1 calc(33.33% - 4px);font-size:11px!important;padding:10px 7px!important;gap:6px}.sidebar .nav-label{display:none}.orbit-art{display:none}.welcome-panel{padding:27px}.welcome-panel h2{font-size:27px}.welcome-panel p{font-size:10px}.home-grid{gap:12px}.home-link{padding:18px}.home-link h2{font-size:13px}.home-link p{font-size:10px}.card-grid{grid-template-columns:1fr}.home-bottom{font-size:9px;gap:12px}.assistant-layout{grid-template-columns:1fr}.chat-panel .panel-title{gap:5px;flex-wrap:wrap}.page-heading .soft{font-size:10px;padding:10px}.home-link>span{font-size:23px}.space-filters{gap:8px}.space-filters input,.space-filters select{padding:10px;font-size:11px}}
 .sidebar{overflow-y:auto}.space-card{min-width:0}
 
@@ -65,52 +137,268 @@
 #daily-app nav button{white-space:nowrap}#daily-app .sidebar{scrollbar-width:thin}@media(min-width:761px) and (max-width:1100px){#daily-app nav button{font-size:12px;gap:8px;padding-left:12px;padding-right:12px}}
 </style></head>
 <body><div id="vault-screen"><section class="vault-card"><span class="brand-icon">日</span><div class="eyebrow">MY PERSONAL SPACE · INDEPENDENT EDITION</div><h1 id="vault-heading">我的私人空间</h1><p>口令只用于本地加密，不使用 ChatGPT 登录，不上传账本或笔记。</p><form id="vault-form"><label>保险箱口令<input type="password" id="vault-password" minlength="1" maxlength="256" autocomplete="current-password" required></label><label id="vault-repeat-label">再次输入口令<input type="password" id="vault-repeat" maxlength="256" autocomplete="new-password"></label><div id="vault-error" role="alert"></div><button class="primary full" id="vault-submit">进入空间</button></form><div class="vault-details">首次使用请设置口令，可以只输入一个字符。口令无法找回；忘记口令只能使用你仍能解密的备份恢复。输入正确口令后，同一浏览器可在 10 天内直接进入。点「锁定空间」可提前结束免输。<br>离线文件请固定保存位置；更换域名、文件路径或浏览器后，需要导入备份。<br>若已有备份，请先设置本设备口令，再进入「数据与备份」导入。</div></section></div><div id="daily-app" hidden>
-<aside class="sidebar"><a class="brand" href="#"><span class="brand-icon">日</span><div>日常<span>MY PERSONAL SPACE</span></div></a><div class="nav-label">我的空间</div><nav><button data-view="ledger" class="active"><span>▦</span>生活账本</button><button data-view="notes"><span>▤</span>记事本 <small id="note-count">0</small></button></nav><div class="side-bottom"><div class="plant">✳</div><h3>把日子，慢慢记下来。</h3><p>每一笔花销，每一个想法，<br>都是生活的小小切片。</p><button id="backup-button">↗ 数据与备份</button><span class="local-badge">● 数据在本浏览器中加密保存</span></div></aside>
+<aside class="sidebar"><a class="brand" href="#"><span class="brand-icon">日</span><div>日常<span>MY PERSONAL SPACE</span></div></a><div class="nav-label">我的空间</div><nav><button data-view="ledger" class="active"><span>▦</span>生活账本</button><button data-view="notes"><span>▤</span>记事本 <small id="note-count">0</small></button><button data-view="reminders"><span>◉</span>提醒事项</button><button data-view="photos"><span>▧</span>照片墙</button></nav><div class="side-bottom"><div class="plant">✳</div><h3>把日子，慢慢记下来。</h3><p>每一笔花销，每一个想法，<br>都是生活的小小切片。</p><button id="backup-button">↗ 数据与备份</button><span class="local-badge">● 数据在本浏览器中加密保存</span></div></aside>
 <main><header><span id="today-label"></span><span class="private-label">◉ 本地加密空间</span></header><div class="vault-strip"><span id="vault-status"></span><span id="vault-remember-status" hidden></span><button id="change-password">更换口令</button><button id="lock-vault">锁定空间 ↗</button></div><div class="vault-warning" id="conflict-warning" hidden>其他标签页已修改数据。请备份当前内容后刷新，再解锁继续编辑。</div><div class="vault-warning" id="legacy-warning" hidden>检测到同域名旧版明文数据，已复制到加密保险箱。旧明文副本未删除；导出并核对备份后，可在浏览器开发者工具中仅移除 daily-space-v1，勿清除整个网站数据。</div>
-<section id="ledger-view"><div class="page-heading"><div><div class="eyebrow">A LITTLE MORE MINDFUL, EVERY DAY</div><h1>生活账本<span>把花销记清，把生活过好。</span></h1></div><button class="primary" id="add-expense">＋ 记一笔</button></div>
-<div class="stats"><article class="stat featured"><div>今日支出 <span>↗</span></div><strong id="today-total">¥ 0.00</strong><p id="today-count">今天还没有记录，开始记下第一笔吧</p></article><article class="stat"><div>本月支出 <span>▦</span></div><strong id="month-total">¥ 0.00</strong><p id="month-count">本月共 0 笔支出</p></article><article class="stat"><div>本月日均 <span>☀</span></div><strong id="average-total">¥ 0.00</strong><p>按本月已过天数计算</p></article></div>
-<div class="section-heading"><div><h2>支出概览</h2><p>每一天的记录，汇成生活的轨迹。</p></div><div class="month-picker"><button id="previous-month" aria-label="上个月">‹</button><input id="selected-month" type="month" aria-label="选择统计月份"><button id="next-month" aria-label="下个月">›</button></div></div>
-<div class="analytics"><article class="panel trend"><div class="panel-title"><h3>每日花销</h3><span id="chart-caption"></span></div><div id="chart" class="chart"></div><div class="chart-axis"><span>1 日</span><span id="midday"></span><span id="lastday"></span></div></article><article class="panel categories"><div class="panel-title"><h3>分类占比</h3><span>支出分布</span></div><div id="category-list"></div></article></div>
-<article class="panel transactions"><div class="panel-title"><div><h3>支出明细 <small id="record-count">0 笔</small></h3></div><div class="filters"><input id="search" type="search" placeholder="搜索备注…" aria-label="搜索支出备注"><select id="category-filter" aria-label="按分类筛选"><option value="">全部分类</option></select><input id="date-filter" type="date" aria-label="筛选日期"><button class="text-button" id="clear-filters">重置</button></div></div><div class="table-wrap"><table><thead><tr><th>日期</th><th>分类 / 备注</th><th class="amount">金额</th><th class="actions">操作</th></tr></thead><tbody id="records"></tbody></table></div><div id="empty-ledger" class="empty"><span>▧</span><h3>让记录，从这一笔开始</h3><p>早餐、通勤，或是一杯咖啡。<br>记下小小花销，慢慢了解自己的生活。</p><button class="soft" id="empty-add">＋ 添加第一笔支出</button></div><div class="table-footer" id="filtered-total"></div></article></section>
+<section id="ledger-view"><div class="page-heading"><div><div class="eyebrow">A LITTLE MORE MINDFUL, EVERY DAY</div><h1>生活账本<span>把花销记清，把生活过好。</span></h1></div><div class="ledger-actions"><button class="soft" id="add-expense">＋ 记支出</button><button class="primary" id="add-income">＋ 记收入</button></div></div>
+<div class="stats ledger-balance"><article class="stat"><div>累计总收入</div><strong id="all-income">¥ 0.00</strong></article><article class="stat"><div>累计总支出</div><strong id="all-expense">¥ 0.00</strong></article><article class="stat featured"><div>累计结余</div><strong id="all-net">¥ 0.00</strong><p>累计收入 − 累计支出</p></article></div><div class="stats ledger-spending"><article class="stat"><div>今日支出 <span>↗</span></div><strong id="today-total">¥ 0.00</strong><p id="today-count">今天还没有记录，开始记下第一笔吧</p></article><article class="stat"><div>本月支出 <span>▦</span></div><strong id="month-total">¥ 0.00</strong><p id="month-count">本月共 0 笔支出</p></article><article class="stat"><div>本月日均 <span>☀</span></div><strong id="average-total">¥ 0.00</strong><p>按本月已过天数计算</p></article></div>
+<div class="section-heading"><div><h2>月度收支</h2></div><div class="month-picker"><button id="previous-month" aria-label="上个月">‹</button><input id="selected-month" type="month" aria-label="选择统计月份"><button id="next-month" aria-label="下个月">›</button></div></div>
+<div class="period-balance" aria-label="所选月份收支"><div>当月收入<strong id="period-income"></strong></div><div>当月支出<strong id="period-expense"></strong></div><div>当月结余<strong id="period-net"></strong></div></div><div class="analytics"><article class="panel trend"><div class="panel-title"><h3>每日花销</h3><span id="chart-caption"></span></div><div id="chart" class="chart"></div><div class="chart-axis"><span>1 日</span><span id="midday"></span><span id="lastday"></span></div></article><article class="panel categories"><div class="panel-title"><h3>分类占比</h3><span>支出分布</span></div><div id="category-list"></div></article></div>
+<article class="panel transactions"><div class="panel-title"><div><h3>收支明细 <small id="record-count">0 笔</small></h3></div><div class="filters"><select id="transaction-filter" aria-label="筛选收支类型"><option value="">全部收支</option><option value="income">收入</option><option value="expense">支出</option></select><input id="search" type="search" placeholder="搜索备注…" aria-label="搜索收支备注"><select id="category-filter" aria-label="按分类筛选"><option value="">全部分类</option></select><input id="date-filter" type="date" aria-label="筛选日期"><button class="text-button" id="clear-filters">重置</button></div></div><div class="table-wrap"><table><thead><tr><th>日期</th><th>分类 / 备注</th><th class="amount">金额</th><th class="actions">操作</th></tr></thead><tbody id="records"></tbody></table></div><div id="empty-ledger" class="empty"><span>▧</span><h3>让记录，从这一笔开始</h3><p>记录一笔收入或支出后，这里会自动汇总。</p><button class="soft" id="empty-add">＋ 记支出</button></div><div class="table-footer" id="filtered-total"></div></article></section>
 <section id="notes-view" hidden><div class="page-heading"><div><div class="eyebrow">MAKE ROOM FOR YOUR THOUGHTS</div><h1>记事本<span>随手写下，生活里的小事。</span></h1></div><button class="primary" id="new-note">＋ 新建笔记</button></div><div class="notes-layout"><div class="panel note-sidebar"><input id="note-search" type="search" placeholder="搜索笔记…" aria-label="搜索笔记"><div id="note-list"></div></div><article class="panel editor"><div id="note-placeholder" class="empty"><span>✎</span><h3>留一点空间，给自己的想法</h3><p>新建一篇笔记，记录清单、灵感与日常。</p></div><div id="note-editor" hidden><div class="editor-toolbar"><span id="save-status">自动保存</span><button class="text-button danger" id="delete-note">删除笔记</button></div><input id="note-title" maxlength="120" placeholder="无标题笔记" aria-label="笔记标题"><label class="note-date-field" for="note-date">笔记日期<input id="note-date" type="date" min="1900-01-01" max="9999-12-31" required></label><section class="note-attachments" aria-label="笔记图片"><div class="note-attachment-toolbar"><button type="button" class="soft" id="note-image-add">＋ 添加图片</button><span id="note-image-count"></span><input type="file" accept="image/*" id="note-image-input" multiple hidden></div><div id="note-image-gallery" class="note-image-gallery"></div></section><textarea id="note-body" placeholder="从这里开始，写下此刻的想法…" aria-label="笔记内容"></textarea><div id="word-count"></div></div></article></div></section>
+<section id="reminders-view" hidden>
+  <div class="page-heading"><div><h1>提醒事项</h1><p class="section-note" id="reminder-summary"></p></div></div>
+  <div class="panel reminder-panel">
+    <form id="reminder-add-form" class="reminder-add">
+      <input id="reminder-quick-title" aria-label="新提醒事项" placeholder="写下一件要做的事…" maxlength="120" required>
+      <button class="primary" type="submit">＋ 添加</button>
+    </form>
+    <div class="reminder-filters" aria-label="筛选提醒事项">
+      <button type="button" data-reminder-filter="all" aria-pressed="true">全部</button>
+      <button type="button" data-reminder-filter="open" aria-pressed="false">待完成</button>
+      <button type="button" data-reminder-filter="done" aria-pressed="false">已完成</button>
+    </div>
+    <ul id="reminder-list" class="reminder-list"></ul>
+    <p class="section-note">点事项文字可编辑和设定日期时间。</p>
+  </div>
+</section>
+<section id="photos-view" hidden>
+  <div class="page-heading"><div><h1>照片墙</h1><p class="section-note" id="photo-wall-count"></p></div><button type="button" class="primary" id="photo-wall-add">＋ 添加照片</button></div>
+  <input type="file" accept="image/*" id="photo-wall-input" multiple hidden>
+  <p id="photo-wall-empty" class="panel collection-empty">照片墙还是空的。添加照片后，点缩略图可以看大图。</p>
+  <div id="photo-wall-grid" class="photo-wall-grid"></div>
+</section>
 <footer>日常 <span>·</span> 给生活一点秩序，也留一点自由。</footer></main>
-<dialog id="note-image-dialog"><div class="dialog-heading"><h2>笔记图片</h2><button type="button" class="close" data-close="note-image-dialog" aria-label="关闭图片">×</button></div><img id="note-image-full" alt=""></dialog><dialog id="expense-dialog"><form id="expense-form"><div class="dialog-heading"><div><div class="eyebrow">LITTLE THINGS COUNT</div><h2 id="expense-title">记一笔支出</h2></div><button type="button" class="close" data-close="expense-dialog" aria-label="关闭">×</button></div><label>金额（元）<input id="expense-amount" type="number" min="0.01" max="99999999.99" step="0.01" placeholder="0.00" required></label><div class="form-grid"><label>日期<input id="expense-date" type="date" required></label><label>分类<select id="expense-category" required></select></label></div><label>备注<input id="expense-description" maxlength="200" placeholder="这笔钱花在了哪里？（选填）"></label><p class="form-help">保存后，日/月统计会自动更新。</p><button class="primary full" type="submit">保存这笔支出</button></form></dialog>
+<dialog id="reminder-dialog">
+  <form id="reminder-edit-form">
+    <div class="dialog-heading"><h2>编辑提醒事项</h2><button type="button" class="close" data-close="reminder-dialog" aria-label="关闭">×</button></div>
+    <label>事项<input id="reminder-edit-title" maxlength="120" required></label>
+    <label>日期和时间（选填）<input id="reminder-edit-due" type="datetime-local" min="1900-01-01T00:00" max="9999-12-31T23:59"></label>
+    <div class="confirm-buttons"><button type="button" id="reminder-delete" class="text-button danger">删除</button><button class="primary" type="submit">保存</button></div>
+  </form>
+</dialog>
+<dialog id="photo-wall-dialog">
+  <div class="dialog-heading"><h2>照片</h2><button type="button" class="close" data-close="photo-wall-dialog" aria-label="关闭照片">×</button></div>
+  <img id="photo-wall-full" alt="">
+  <form id="photo-wall-edit-form">
+    <label>照片说明（选填）<input id="photo-wall-caption" maxlength="100"></label>
+    <div class="confirm-buttons"><button type="button" id="photo-wall-delete" class="text-button danger">移除照片</button><button class="primary" type="submit">保存说明</button></div>
+  </form>
+</dialog>
+<dialog id="note-image-dialog"><div class="dialog-heading"><h2>笔记图片</h2><button type="button" class="close" data-close="note-image-dialog" aria-label="关闭图片">×</button></div><img id="note-image-full" alt=""></dialog><dialog id="expense-dialog"><form id="expense-form"><div class="dialog-heading"><div><div class="eyebrow">LITTLE THINGS COUNT</div><h2 id="expense-title">记一笔支出</h2></div><button type="button" class="close" data-close="expense-dialog" aria-label="关闭">×</button></div><label>类型<select id="transaction-kind"><option value="expense">支出</option><option value="income">收入</option></select></label><label>金额（元）<input id="expense-amount" type="number" min="0.01" max="99999999.99" step="0.01" placeholder="0.00" required></label><div class="form-grid"><label>日期<input id="expense-date" type="date" required></label><label>分类<select id="expense-category" required></select></label></div><label>备注<input id="expense-description" maxlength="200" placeholder="例如：工资、午饭（选填）"></label><p class="form-help">保存后，日/月统计会自动更新。</p><button class="primary full" id="transaction-save" type="submit">保存支出</button></form></dialog>
 <dialog id="backup-dialog"><div class="dialog-heading"><h2>数据与备份</h2><button class="close" data-close="backup-dialog" aria-label="关闭">×</button></div><p>账本和笔记保存在当前设备的当前浏览器，暂不跨设备同步。清除浏览器数据可能丢失记录，请定期导出备份。</p><div class="backup-actions"><button id="export-encrypted" class="primary">导出加密完整备份（推荐）</button><button id="export-json" class="primary">导出完整备份（JSON）</button><button id="export-csv" class="soft">导出账单（CSV）</button><label class="import-label">导入 JSON / 加密 JSON / CSV<input type="file" id="import-json" accept="application/json,.json,text/csv,.csv"></label></div><p class="form-help">导入会合并记录；相同 ID 的记录以备份为准。支持旧版 JSON、新版加密 JSON 和本网站账单 CSV。CSV 只恢复账单，每次导入会新增，请勿重复导入。明文备份请妥善保管。</p><div class="backup-actions"><button class="soft" id="audit-data">核对当前数据</button><button class="soft" id="export-audit">导出数据核对报告</button></div><pre id="migration-report"></pre></dialog>
-<dialog id="confirm-dialog"><h2 id="confirm-title">确认删除？</h2><p id="confirm-text"></p><div class="confirm-buttons"><button class="soft" id="confirm-cancel">取消</button><button class="primary" id="confirm-ok">确认</button></div></dialog><div id="toast" role="status" aria-live="polite"></div><dialog id="backup-password-dialog"><form id="backup-password-form"><h2>解密导入的备份</h2><label>这份备份原来的保险箱口令<input id="backup-password" type="password" autocomplete="off" required></label><p class="form-help">导入后会用当前设备的保险箱口令重新加密。</p><div class="confirm-buttons"><button type="button" class="soft" id="backup-password-cancel">取消</button><button class="primary">解密</button></div></form></dialog><dialog id="change-password-dialog"><form id="change-password-form"><h2>更换本地保险箱口令</h2><label>新口令<input type="password" id="new-vault-password" minlength="1" maxlength="256" required></label><label>再次输入<input type="password" id="new-vault-repeat" maxlength="256" required></label><p class="form-help">旧加密备份仍需旧口令。修改后请重新导出加密备份。</p><div class="confirm-buttons"><button class="soft" type="button" data-close="change-password-dialog">取消</button><button class="primary">保存新口令</button></div></form></dialog></div><noscript>本网站需要启用 JavaScript。不会向任何服务器上传你的账本。</noscript><script>(function(root){
-const categories=['餐饮','交通','购物','居家','娱乐','医疗','学习','其他'];
-function validDate(d){if(typeof d!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(d)||d<'1900-01-01'||d>'9999-12-31')return false;const date=new Date(d+'T12:00:00Z');return !isNaN(date)&&date.toISOString().slice(0,10)===d}
+<dialog id="confirm-dialog"><h2 id="confirm-title">确认删除？</h2><p id="confirm-text"></p><div class="confirm-buttons"><button class="soft" id="confirm-cancel">取消</button><button class="primary" id="confirm-ok">确认</button></div></dialog><div id="toast" role="status" aria-live="polite"></div><dialog id="backup-password-dialog"><form id="backup-password-form"><h2>解密导入的备份</h2><label>这份备份原来的保险箱口令<input id="backup-password" type="password" autocomplete="off" required></label><p class="form-help">导入后会用当前设备的保险箱口令重新加密。</p><div class="confirm-buttons"><button type="button" class="soft" id="backup-password-cancel">取消</button><button class="primary">解密</button></div></form></dialog><dialog id="change-password-dialog"><form id="change-password-form"><h2>更换本地保险箱口令</h2><label>新口令<input type="password" id="new-vault-password" minlength="1" maxlength="256" required></label><label>再次输入<input type="password" id="new-vault-repeat" maxlength="256" required></label><p class="form-help">旧加密备份仍需旧口令。修改后请重新导出加密备份。</p><div class="confirm-buttons"><button class="soft" type="button" data-close="change-password-dialog">取消</button><button class="primary">保存新口令</button></div></form></dialog></div><noscript>本网站需要启用 JavaScript。不会向任何服务器上传你的账本。</noscript><script>(function(root) {
+'use strict';
+const categories = ['餐饮', '交通', '购物', '居家', '娱乐', '医疗', '学习', '其他'];
+const incomeCategories = ['工资', '奖金', '兼职', '退款', '礼金', '投资收益', '其他收入'];
 const noteImageLimit = 6;
 const noteImageDataLimit = 250000;
-function validNoteImages(images) {
-  if (images === undefined) return true;
-  if (!Array.isArray(images) || images.length > noteImageLimit) return false;
-  const ids = new Set();
-  return images.every(image => {
-    if (!image || typeof image.id !== 'string' || !image.id || ids.has(image.id) ||
-        typeof image.name !== 'string' || image.name.length > 150 ||
-        typeof image.src !== 'string' || image.src.length > noteImageDataLimit ||
-        !/^data:image\/jpeg;base64,\/9j\/[A-Za-z0-9+/]+={0,2}$/.test(image.src)) return false;
-    ids.add(image.id);
-    return true;
-  });
+const photoWallLimit = 48;
+const collectionKeys = ['expenses', 'incomes', 'notes', 'reminders', 'photos'];
+
+function validDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) ||
+      value < '1900-01-01' || value > '9999-12-31') return false;
+  const date = new Date(value + 'T12:00:00Z');
+  return !isNaN(date) && date.toISOString().slice(0, 10) === value;
 }
-function cents(v){if(!/^\d+(\.\d{1,2})?$/.test(String(v)))throw Error('金额最多保留两位小数');const n=Math.round(Number(v)*100);if(!Number.isSafeInteger(n)||n<=0||n>9999999999)throw Error('请输入 0.01 至 99,999,999.99 元');return n}
-function validate(data){if(!data||data.version!==1||!Array.isArray(data.expenses)||!Array.isArray(data.notes)||data.expenses.length>100000||data.notes.length>10000)throw Error('备份格式不正确');const ids=new Set();for(const e of data.expenses){if(!e||typeof e.id!=='string'||!e.id||ids.has(e.id)||!validDate(e.date)||!Number.isSafeInteger(e.cents)||e.cents<=0||e.cents>9999999999||!categories.includes(e.category)||typeof e.description!=='string'||e.description.length>200)throw Error('账单数据无效');ids.add(e.id)}ids.clear();for(const n of data.notes){if(!n||typeof n.id!=='string'||!n.id||ids.has(n.id)||typeof n.title!=='string'||n.title.length>120||typeof n.body!=='string'||n.body.length>1000000||typeof n.updatedAt!=='string'||isNaN(Date.parse(n.updatedAt))||(n.date!==undefined&&!validDate(n.date))||!validNoteImages(n.images))throw Error('笔记数据无效');ids.add(n.id)}return data}
-function sum(items){return items.reduce((s,e)=>s+e.cents,0)}
-function monthStats(items,month){const rows=items.filter(e=>e.date.startsWith(month+'-'));const days={};const groups={};for(const e of rows){days[e.date]=(days[e.date]||0)+e.cents;groups[e.category]=(groups[e.category]||0)+e.cents}return {total:sum(rows),days,groups,rows}}
-const api={categories,validDate,cents,validate,sum,monthStats,noteImageLimit,noteImageDataLimit};root.DailyCore=api;if(typeof module!=='undefined')module.exports=api;
+
+function validDateTime(value) {
+  return typeof value === 'string' &&
+    /^\d{4}-\d{2}-\d{2}T(?:[01]\d|2[0-3]):[0-5]\d$/.test(value) &&
+    validDate(value.slice(0, 10));
+}
+
+function cents(value) {
+  if (!/^\d+(\.\d{1,2})?$/.test(String(value))) throw Error('金额最多保留两位小数');
+  const amount = Math.round(Number(value) * 100);
+  if (!Number.isSafeInteger(amount) || amount <= 0 || amount > 9999999999) {
+    throw Error('请输入 0.01 至 99,999,999.99 元');
+  }
+  return amount;
+}
+
+function validateRows(rows, limit, predicate, message) {
+  if (!Array.isArray(rows) || rows.length > limit) throw Error(message);
+  const ids = new Set();
+  for (const row of rows) {
+    if (!row || typeof row.id !== 'string' || !row.id || ids.has(row.id) || !predicate(row)) {
+      throw Error(message);
+    }
+    ids.add(row.id);
+  }
+}
+
+function validImage(image) {
+  return typeof image.name === 'string' && image.name.length <= 150 &&
+    typeof image.src === 'string' && image.src.length <= noteImageDataLimit &&
+    /^data:image\/jpeg;base64,\/9j\/[A-Za-z0-9+/]+={0,2}$/.test(image.src);
+}
+
+function validTransaction(row, kinds) {
+  return validDate(row.date) && Number.isSafeInteger(row.cents) && row.cents > 0 &&
+    row.cents <= 9999999999 && kinds.includes(row.category) &&
+    typeof row.description === 'string' && row.description.length <= 200;
+}
+
+function validate(data) {
+  if (!data || data.version !== 1 || !Array.isArray(data.expenses) || !Array.isArray(data.notes)) {
+    throw Error('备份格式不正确');
+  }
+  validateRows(data.expenses, 100000, row => validTransaction(row, categories), '支出数据无效');
+  if (data.incomes !== undefined) {
+    validateRows(data.incomes, 100000, row => validTransaction(row, incomeCategories), '收入数据无效');
+  }
+  validateRows(data.notes, 10000, note => {
+    if (note.images !== undefined) validateRows(note.images, noteImageLimit, validImage, '笔记图片无效');
+    return typeof note.title === 'string' && note.title.length <= 120 &&
+      typeof note.body === 'string' && note.body.length <= 1000000 &&
+      typeof note.updatedAt === 'string' && !isNaN(Date.parse(note.updatedAt)) &&
+      (note.date === undefined || validDate(note.date));
+  }, '笔记数据无效');
+  if (data.reminders !== undefined) {
+    validateRows(data.reminders, 10000, item =>
+      typeof item.title === 'string' && Boolean(item.title.trim()) && item.title.length <= 120 &&
+      (item.due === '' || validDateTime(item.due)) && typeof item.done === 'boolean',
+    '提醒事项数据无效');
+  }
+  if (data.photos !== undefined) {
+    validateRows(data.photos, photoWallLimit, photo =>
+      validImage(photo) && validDate(photo.date) &&
+      typeof photo.caption === 'string' && photo.caption.length <= 100,
+    '照片墙数据无效');
+  }
+  return data;
+}
+
+function sum(items) {
+  return items.reduce((total, item) => total + item.cents, 0);
+}
+
+function monthStats(items, month) {
+  const rows = items.filter(item => item.date.startsWith(month + '-'));
+  const days = {};
+  const groups = {};
+  for (const item of rows) {
+    days[item.date] = (days[item.date] || 0) + item.cents;
+    groups[item.category] = (groups[item.category] || 0) + item.cents;
+  }
+  return {total: sum(rows), days, groups, rows};
+}
+
+function balance(expenses, incomes) {
+  const expense = sum(expenses);
+  const income = sum(incomes);
+  return {expense, income, net: income - expense};
+}
+
+const api = {
+  categories, incomeCategories, collectionKeys, validDate, validDateTime,
+  cents, validate, sum, monthStats, balance, noteImageLimit, noteImageDataLimit, photoWallLimit,
+};
+root.DailyCore = api;
+if (typeof module !== 'undefined') module.exports = api;
 })(globalThis);
 
 (function(root){
 'use strict';const C=root.DailyCore||require('./core.js');
 function validUrl(s){try{return ['https:','http:'].includes(new URL(s).protocol)}catch{return false}}
 function validate(data){C.validate(data);if(data.space){const v=data.space;if(!Array.isArray(v.tools)||!Array.isArray(v.projects)||v.tools.length>10000||v.projects.length>10000||!v.profile)throw Error('个人空间格式错误');for(const type of ['tools','projects']){const ids=new Set();for(const x of v[type]){if(!x||typeof x.id!=='string'||!x.id||ids.has(x.id)||typeof x.title!=='string'||x.title.length>120||typeof x.description!=='string'||x.description.length>10000||typeof x.url!=='string'||(x.url&&!validUrl(x.url)))throw Error('工具或项目无效');ids.add(x.id);if(type==='tools'&&(typeof x.category!=='string'||x.category.length>60))throw Error('工具分类无效');if(type==='projects'&&!['想法','进行中','已上线','已归档'].includes(x.status))throw Error('项目状态无效')}}for(const k of ['name','bio','experience','works'])if(typeof v.profile[k]!=='string'||v.profile[k].length>20000)throw Error('个人资料无效')}return data}
-function merge(current,incoming){validate(current);validate(incoming);const next=structuredClone(current);for(const type of ['expenses','notes']){const map=new Map(next[type].map(x=>[x.id,x]));incoming[type].forEach(x=>map.set(x.id,structuredClone(x)));next[type]=[...map.values()]}if(incoming.space)next.space=structuredClone(incoming.space);return validate(next)}
-function fingerprint(data){validate(data);const sorted=structuredClone(data);for(const k of ['expenses','notes'])sorted[k].sort((a,b)=>a.id.localeCompare(b.id));if(sorted.space)for(const k of ['tools','projects'])sorted.space[k].sort((a,b)=>a.id.localeCompare(b.id));const stable=v=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().filter(k=>!['readError'].includes(k)).map(k=>[k,stable(v[k])])):v;return JSON.stringify(stable(sorted))}
-async function audit(data){const text=fingerprint(data),hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return {expenses:data.expenses.length,notes:data.notes.length,tools:data.space?.tools.length||0,projects:data.space?.projects.length||0,totalCents:C.sum(data.expenses),sha256:Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('')}}
-function csv(data){validate(data);const cell=v=>'"'+String(v).replace(/"/g,'""')+'"';const safe=v=>/^\s*[=+@\-\t\r]/.test(v)?"'"+v:v;return '\uFEFF'+[['日期','分类','金额（元）','备注'],...data.expenses.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(e=>[e.date,e.category,(e.cents/100).toFixed(2),safe(e.description)])].map(r=>r.map(cell).join(',')).join('\r\n')}
+function merge(current, incoming) {
+  validate(current);
+  validate(incoming);
+  const next = structuredClone(current);
+  for (const key of C.collectionKeys) {
+    if (!incoming[key]) continue;
+    const entries = new Map((next[key] ?? []).map(item => [item.id, item]));
+    for (const item of incoming[key]) entries.set(item.id, structuredClone(item));
+    next[key] = [...entries.values()];
+  }
+  if (incoming.space) next.space = structuredClone(incoming.space);
+  return validate(next);
+}
+function fingerprint(data) {
+  validate(data);
+  const sorted = structuredClone(data);
+  for (const key of C.collectionKeys) sorted[key]?.sort((a,b) => a.id.localeCompare(b.id));
+  if (sorted.space) for (const key of ['tools', 'projects']) sorted.space[key].sort((a,b) => a.id.localeCompare(b.id));
+  const stable = value => Array.isArray(value) ? value.map(stable) : value && typeof value === 'object'
+    ? Object.fromEntries(Object.keys(value).sort().filter(key => key !== 'readError').map(key => [key, stable(value[key])]))
+    : value;
+  return JSON.stringify(stable(sorted));
+}
+async function audit(data) {
+  const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(fingerprint(data)));
+  const totals = C.balance(data.expenses, data.incomes ?? []);
+  return {
+    expenses: data.expenses.length, incomes: data.incomes?.length ?? 0, notes: data.notes.length,
+    reminders: data.reminders?.length ?? 0, photos: data.photos?.length ?? 0,
+    tools: data.space?.tools.length || 0, projects: data.space?.projects.length || 0,
+    totalCents: totals.expense, incomeCents: totals.income, balanceCents: totals.net,
+    sha256: Array.from(new Uint8Array(hash), byte => byte.toString(16).padStart(2, '0')).join(''),
+  };
+}
+const csvHeader = ['日期', '分类', '金额（元）', '备注'];
+const formula = /^\s*[=+@\-\t\r]/;
+function csv(data) {
+  validate(data);
+  const withIncome = Boolean(data.incomes?.length);
+  const header = withIncome ? ['类型', ...csvHeader] : csvHeader;
+  const entries = [
+    ...data.expenses.map(entry => ['支出', entry]),
+    ...(data.incomes ?? []).map(entry => ['收入', entry]),
+  ].sort((a, b) => b[1].date.localeCompare(a[1].date));
+  const rows = entries.map(([kind, entry]) => {
+    const description = formula.test(entry.description) ? "'" + entry.description : entry.description;
+    const fields = [entry.date, entry.category, (entry.cents / 100).toFixed(2), description];
+    return withIncome ? [kind, ...fields] : fields;
+  });
+  const cell = value => '"' + String(value).replace(/"/g, '""') + '"';
+  return '\uFEFF' + [header, ...rows].map(row => row.map(cell).join(',')).join('\r\n');
+}
 /* CSV is intentionally bills-only; JSON remains the complete backup format. */
-function parseCsv(text){text=text.replace(/^\uFEFF/,'');const rows=[];let row=[],value='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){value+='"';i++}else if(!quoted&&value!=='')throw Error('CSV 引号格式错误');else quoted=!quoted}else if(c===','&&!quoted){row.push(value);value=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(value);if(row.some(Boolean))rows.push(row);row=[];value=''}else value+=c}if(quoted)throw Error('CSV 引号未闭合');row.push(value);if(row.some(Boolean))rows.push(row);if(rows.shift()?.join('|')!=='日期|分类|金额（元）|备注')throw Error('仅支持本网站导出的 CSV 表头');const expenses=rows.map((r,i)=>{if(r.length!==4)throw Error('CSV 第 '+(i+2)+' 行列数错误');return {id:'csv-'+(crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+i),date:r[0],category:r[1],cents:C.cents(r[2]),description:r[3].startsWith("'")&&/^\s*[=+@\-\t\r]/.test(r[3].slice(1))?r[3].slice(1):r[3]}});return validate({version:1,expenses,notes:[]})}
+function parseCsv(text) {
+  text = text.replace(/^\uFEFF/, '');
+  const rows = [];
+  let row = [];
+  let value = '';
+  let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const character = text[i];
+    if (character === '"') {
+      if (quoted && text[i + 1] === '"') { value += '"'; i++; }
+      else if (!quoted && value !== '') throw Error('CSV 引号格式错误');
+      else quoted = !quoted;
+    } else if (character === ',' && !quoted) {
+      row.push(value);
+      value = '';
+    } else if ((character === '\n' || character === '\r') && !quoted) {
+      if (character === '\r' && text[i + 1] === '\n') i++;
+      row.push(value);
+      if (row.some(Boolean)) rows.push(row);
+      row = [];
+      value = '';
+    } else value += character;
+  }
+  if (quoted) throw Error('CSV 引号未闭合');
+  row.push(value);
+  if (row.some(Boolean)) rows.push(row);
+  const header = rows.shift()?.join('|');
+  const withKind = header === '类型|' + csvHeader.join('|');
+  if (!withKind && header !== csvHeader.join('|')) throw Error('仅支持本网站导出的 CSV 表头');
+  const data = {version: 1, expenses: [], notes: []};
+  rows.forEach((fields, index) => {
+    if (fields.length !== csvHeader.length + Number(withKind)) throw Error('CSV 第 ' + (index + 2) + ' 行列数错误');
+    const [kind, date, category, amount, description] = withKind ? fields : ['支出', ...fields];
+    if (kind !== '收入' && kind !== '支出') throw Error('CSV 第 ' + (index + 2) + ' 行收支类型错误');
+    const entries = kind === '收入' ? (data.incomes ??= []) : data.expenses;
+    entries.push({
+      id: 'csv-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + index),
+      date, category, cents: C.cents(amount),
+      description: description.startsWith("'") && formula.test(description.slice(1)) ? description.slice(1) : description,
+    });
+  });
+  return validate(data);
+}
 root.DailyData={validate,merge,audit,csv,parseCsv,fingerprint};if(typeof module!=='undefined')module.exports=root.DailyData;
 })(globalThis);
 
@@ -478,8 +766,7 @@ const VaultUI = (() => {
 async function startApp(initialData){
 'use strict';
 const $=id=>document.getElementById(id), C=DailyCore;
-const icons={'餐饮':'♨','交通':'↗','购物':'▣','居家':'⌂','娱乐':'♫','医疗':'✚','学习':'▤','其他':'◇'};
-let state=structuredClone(initialData),editId=null,activeNote=null,selectedMonth=localDate().slice(0,7),confirmAction=null;
+let state=structuredClone(initialData),activeNote=null,confirmAction=null;
 function localDate(d = new Date()){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function money(c){return '¥ '+(c/100).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2})}
@@ -510,18 +797,9 @@ function change(mutator, options) {
 function confirmDo(title,text,fn){$('confirm-title').textContent=title;$('confirm-text').textContent=text;confirmAction=fn;$('confirm-dialog').showModal()}
 $('confirm-cancel').onclick=async()=>$('confirm-dialog').close();$('confirm-ok').onclick=async()=>{$('confirm-dialog').close();if(confirmAction)await confirmAction()};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=async()=>$(b.dataset.close).close());
-function showView(view){document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!==view+'-view');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));if(view==='notes')renderNotes()}
+function showView(view){document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!==view+'-view');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));if(view==='notes')renderNotes();if(view==='reminders')renderReminders();if(view==='photos')renderPhotoWall()}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=async()=>showView(b.dataset.view));
 $('today-label').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});
-for(const cat of C.categories){$('expense-category').add(new Option(icons[cat]+' '+cat,cat));$('category-filter').add(new Option(cat,cat))}
-$('selected-month').value=selectedMonth;
-function renderLedger(){const today=localDate(), current=C.monthStats(state.expenses,today.slice(0,7)),todays=state.expenses.filter(e=>e.date===today);$('today-total').textContent=money(C.sum(todays));$('today-count').textContent=todays.length?`今天记录了 ${todays.length} 笔支出`:'今天还没有记录，开始记下第一笔吧';$('month-total').textContent=money(current.total);$('month-count').textContent=`本月共 ${current.rows.length} 笔支出`;$('average-total').textContent=money(Math.round(current.total/Number(today.slice(-2))));
-const stats=C.monthStats(state.expenses,selectedMonth),days=new Date(Number(selectedMonth.slice(0,4)),Number(selectedMonth.slice(5)),0).getDate(),max=Math.max(1,...Object.values(stats.days));$('chart-caption').textContent='当月合计 '+money(stats.total);$('chart').innerHTML=Array.from({length:days},(_,i)=>{const date=selectedMonth+'-'+String(i+1).padStart(2,'0'),n=stats.days[date]||0;return `<div class="bar-slot" title="${date}：${money(n)}" aria-label="${date}支出${money(n)}"><div class="bar" style="height:${n?Math.max(3,n/max*100):2}%;opacity:${n?1:.2}"></div></div>`}).join('');$('midday').textContent=Math.ceil(days/2)+' 日';$('lastday').textContent=days+' 日';$('category-list').innerHTML=Object.entries(stats.groups).sort((a,b)=>b[1]-a[1]).map(([cat,n])=>`<div class="category-row"><span class="category-icon">${icons[cat]}</span><div>${cat}<div class="category-track"><div style="width:${n/stats.total*100}%"></div></div></div><div>${money(n)}<br><small>${(n/stats.total*100).toFixed(1)}%</small></div></div>`).join('')||'<div class="category-empty">这个月还没有支出记录<br><br>记一笔，让生活的轮廓更清晰。</div>';
-const rows=stats.rows.filter(e=>(!$('category-filter').value||e.category===$('category-filter').value)&&(!$('date-filter').value||e.date===$('date-filter').value)&&e.description.toLowerCase().includes($('search').value.trim().toLowerCase())).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));$('record-count').textContent=rows.length+' 笔';$('records').innerHTML=rows.map(e=>`<tr><td class="day-group">${e.date}</td><td><span class="category-icon" style="display:inline-grid;margin-right:8px">${icons[e.category]}</span>${e.category}<span class="record-description">${esc(e.description)}</span></td><td class="amount">${money(e.cents)}</td><td class="actions"><button data-edit="${esc(e.id)}">修改</button><button class="danger" data-delete="${esc(e.id)}">删除</button></td></tr>`).join('');$('empty-ledger').hidden=rows.length>0;$('empty-ledger').querySelector('h3').textContent=stats.rows.length?'没有符合条件的记录':'让记录，从这一笔开始';$('filtered-total').textContent=rows.length?'当前列表合计 '+money(C.sum(rows)):'';document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=async()=>openExpense(b.dataset.edit));document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>confirmDo('删除这笔支出？','删除后将重新计算花销统计。',async()=>{if(await change(s=>s.expenses=s.expenses.filter(e=>e.id!==b.dataset.delete))){renderLedger();toast('已删除支出')}}));}
-function openExpense(id){editId=id||null;const e=state.expenses.find(e=>e.id===id);$('expense-title').textContent=e?'修改支出':'记一笔支出';$('expense-amount').value=e?(e.cents/100).toFixed(2):'';$('expense-date').value=e?e.date:localDate();$('expense-category').value=e?e.category:'餐饮';$('expense-description').value=e?e.description:'';$('expense-dialog').showModal();$('expense-amount').focus()}
-$('add-expense').onclick=$('empty-add').onclick=async()=>openExpense();$('expense-form').onsubmit=async event=>{event.preventDefault();try{const date=$('expense-date').value;if(!C.validDate(date))throw Error('请输入有效日期');const e={id:editId||uid(),date,cents:C.cents($('expense-amount').value),category:$('expense-category').value,description:$('expense-description').value.trim()};if(await change(s=>{const i=s.expenses.findIndex(x=>x.id===e.id);if(i<0)s.expenses.push(e);else s.expenses[i]=e})){selectedMonth=date.slice(0,7);$('selected-month').value=selectedMonth;$('expense-dialog').close();renderLedger();toast('已保存支出')}}catch(e){toast(e.message)}};
-function shiftMonth(delta){const [y,m]=selectedMonth.split('-').map(Number),d=new Date(y,m-1+delta,1);selectedMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;$('selected-month').value=selectedMonth;$('date-filter').value='';renderLedger()}
-$('previous-month').onclick=async()=>shiftMonth(-1);$('next-month').onclick=async()=>shiftMonth(1);$('selected-month').onchange=async()=>{if(/^\d{4}-\d{2}$/.test($('selected-month').value)){selectedMonth=$('selected-month').value;$('date-filter').value='';renderLedger()}};['category-filter','date-filter','search'].forEach(id=>$(id).oninput=renderLedger);$('clear-filters').onclick=async()=>{['category-filter','date-filter','search'].forEach(id=>$(id).value='');renderLedger()};
 function noteDate(note) {
   if (C.validDate(note.date)) return note.date;
   const previousDate = localDate(new Date(note.updatedAt));
@@ -607,7 +885,207 @@ $('note-search').oninput = renderNotes;
 $('delete-note').onclick=async()=>confirmDo('删除这篇笔记？','删除后无法恢复，请确认已备份重要内容。',async()=>{if(await change(s=>s.notes=s.notes.filter(n=>n.id!==activeNote)))selectNote(null)});
 function download(text,type,name){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(async()=>URL.revokeObjectURL(url),1000)}
 let lastDate=localDate();setInterval(async()=>{if(localDate()!==lastDate){lastDate=localDate();$('today-label').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});renderLedger()}},30000);
-renderLedger();renderNotes();
+renderNotes();
+
+const transactionKinds = {
+  expense: {label: '支出', collection: 'expenses', categories: C.categories},
+  income: {label: '收入', collection: 'incomes', categories: C.incomeCategories},
+};
+const expenseIcons = {'餐饮':'♨','交通':'↗','购物':'▣','居家':'⌂','娱乐':'♫','医疗':'✚','学习':'▤','其他':'◇'};
+const filters = ['transaction-filter', 'category-filter', 'date-filter', 'search'];
+let selectedMonth = localDate().slice(0, 7);
+let editingTransaction = null;
+
+function renderBalance(prefix, totals) {
+  for (const key of ['income', 'expense', 'net']) {
+    const element = $(prefix + '-' + key);
+    element.textContent = money(totals[key]);
+    element.classList.toggle('negative-amount', totals[key] < 0);
+  }
+}
+
+function renderExpenseChart(stats) {
+  const [year, month] = selectedMonth.split('-').map(Number);
+  const monthLength = new Date(year, month, 0).getDate();
+  const maximum = Math.max(1, ...Object.values(stats.days));
+  $('chart-caption').textContent = '当月合计 ' + money(stats.total);
+  $('chart').innerHTML = Array.from({length: monthLength}, (_, index) => {
+    const date = selectedMonth + '-' + String(index + 1).padStart(2, '0');
+    const total = stats.days[date] || 0;
+    const height = total ? Math.max(3, 100 * total / maximum) : 2;
+    return `<div class="bar-slot" title="${date}：${money(total)}" aria-label="${date}支出${money(total)}"><div class="bar" style="height:${height}%;opacity:${total ? 1 : .2}"></div></div>`;
+  }).join('');
+  $('midday').textContent = Math.ceil(monthLength / 2) + ' 日';
+  $('lastday').textContent = monthLength + ' 日';
+  $('category-list').innerHTML = Object.entries(stats.groups).sort((a, b) => b[1] - a[1]).map(([category, total]) => {
+    const percentage = 100 * total / stats.total;
+    return `<div class="category-row"><span class="category-icon">${expenseIcons[category]}</span><div>${category}<div class="category-track"><div style="width:${percentage}%"></div></div></div><div>${money(total)}<br><small>${percentage.toFixed(1)}%</small></div></div>`;
+  }).join('') || '<div class="category-empty">所选月份暂无支出</div>';
+}
+
+function renderTransactions(expenses, incomes) {
+  const kindFilter = $('transaction-filter').value;
+  const category = $('category-filter').value;
+  const day = $('date-filter').value;
+  const query = $('search').value.trim().toLowerCase();
+  const all = [
+    ...expenses.map(entry => ({...entry, kind: 'expense'})),
+    ...incomes.map(entry => ({...entry, kind: 'income'})),
+  ];
+  const rows = all.filter(entry =>
+    (!kindFilter || entry.kind === kindFilter) &&
+    (!category || entry.category === category) &&
+    (!day || entry.date === day) &&
+    entry.description.toLowerCase().includes(query)
+  ).sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
+  $('record-count').textContent = rows.length + ' 笔';
+  $('records').innerHTML = rows.map(entry => {
+    const isIncome = entry.kind === 'income';
+    return `<tr><td class="day-group">${entry.date}</td><td><span class="category-icon" style="display:inline-grid;margin-right:8px">${isIncome ? '↙' : expenseIcons[entry.category]}</span>${entry.category}<span class="record-description">${esc(entry.description)}</span></td><td class="amount ${isIncome ? 'income-amount' : ''}">${isIncome ? '+' : ''}${money(entry.cents)}</td><td class="actions"><button data-edit="${esc(entry.id)}" data-kind="${entry.kind}">修改</button><button class="danger" data-delete="${esc(entry.id)}" data-kind="${entry.kind}">删除</button></td></tr>`;
+  }).join('');
+  $('empty-ledger').hidden = rows.length > 0;
+  $('records').querySelectorAll('[data-kind]').forEach(button => {
+    button.onclick = () => editTransactionRow(button);
+  });
+  $('empty-ledger').querySelector('h3').textContent = all.length ? '没有符合条件的记录' : '所选月份暂无收支';
+  const totals = C.balance(rows.filter(row => row.kind === 'expense'), rows.filter(row => row.kind === 'income'));
+  $('filtered-total').textContent = rows.length ? `筛选结果：收入 ${money(totals.income)} · 支出 ${money(totals.expense)} · 结余 ${money(totals.net)}` : '';
+}
+
+function renderLedger() {
+  const today = localDate();
+  const currentMonth = C.monthStats(state.expenses, today.slice(0, 7));
+  const todayRows = state.expenses.filter(entry => entry.date === today);
+  const incomes = state.incomes ?? [];
+  const selectedExpenses = C.monthStats(state.expenses, selectedMonth);
+  const selectedIncomes = C.monthStats(incomes, selectedMonth).rows;
+  renderBalance('all', C.balance(state.expenses, incomes));
+  renderBalance('period', C.balance(selectedExpenses.rows, selectedIncomes));
+  $('today-total').textContent = money(C.sum(todayRows));
+  $('today-count').textContent = `今天共 ${todayRows.length} 笔支出`;
+  $('month-total').textContent = money(currentMonth.total);
+  $('month-count').textContent = `本月共 ${currentMonth.rows.length} 笔支出`;
+  $('average-total').textContent = money(Math.round(currentMonth.total / Number(today.slice(-2))));
+  renderExpenseChart(selectedExpenses);
+  renderTransactions(selectedExpenses.rows, selectedIncomes);
+}
+
+function setCategoryOptions(select, kind, placeholder) {
+  const categories = kind ? transactionKinds[kind].categories : [...C.categories, ...C.incomeCategories];
+  const options = categories.map(category => new Option(category, category));
+  if (placeholder) options.unshift(new Option(placeholder, ''));
+  select.replaceChildren(...options);
+}
+
+function updateTransactionForm() {
+  const kind = $('transaction-kind').value;
+  const previous = $('expense-category').value;
+  const label = transactionKinds[kind].label;
+  setCategoryOptions($('expense-category'), kind);
+  if (transactionKinds[kind].categories.includes(previous)) $('expense-category').value = previous;
+  $('expense-title').textContent = (editingTransaction ? '修改' : '记一笔') + label;
+  $('transaction-save').textContent = '保存' + label;
+}
+
+function openTransaction(kind, id) {
+  const entry = (state[transactionKinds[kind].collection] ?? []).find(item => item.id === id);
+  editingTransaction = entry ? {kind, id} : null;
+  $('transaction-kind').value = kind;
+  $('expense-amount').value = entry ? (entry.cents / 100).toFixed(2) : '';
+  $('expense-date').value = entry?.date || localDate();
+  $('expense-description').value = entry?.description || '';
+  $('expense-category').value = '';
+  updateTransactionForm();
+  if (entry) $('expense-category').value = entry.category;
+  $('expense-dialog').showModal();
+  $('expense-amount').focus();
+}
+
+function showLedgerMonth(month) {
+  if (!C.validDate(month + '-01')) return;
+  selectedMonth = month;
+  $('selected-month').value = month;
+  $('date-filter').value = '';
+  renderLedger();
+}
+
+function shiftMonth(delta) {
+  const [year, month] = selectedMonth.split('-').map(Number);
+  showLedgerMonth(localDate(new Date(year, month - 1 + delta, 1)).slice(0, 7));
+}
+
+$('add-expense').onclick = $('empty-add').onclick = () => openTransaction('expense');
+$('add-income').onclick = () => openTransaction('income');
+$('transaction-kind').onchange = updateTransactionForm;
+$('expense-form').onsubmit = async event => {
+  event.preventDefault();
+  const formButton = $('transaction-save');
+  if (formButton.disabled) return;
+  formButton.disabled = true;
+  try {
+    const kind = $('transaction-kind').value;
+    const config = transactionKinds[kind];
+    const original = editingTransaction;
+    const date = $('expense-date').value;
+    if (!C.validDate(date)) throw Error('请输入有效日期');
+    const entry = {
+      id: original && (original.kind === kind || !(state[config.collection] ?? []).some(item => item.id === original.id))
+        ? original.id : uid(),
+      date,
+      cents: C.cents($('expense-amount').value),
+      category: $('expense-category').value,
+      description: $('expense-description').value.trim(),
+    };
+    if (await change(data => {
+      if (original) {
+        const previous = transactionKinds[original.kind].collection;
+        data[previous] = data[previous].filter(item => item.id !== original.id);
+      }
+      (data[config.collection] ??= []).push(entry);
+    }, {retainOnFailure: original?.kind === kind})) {
+      filters.forEach(id => { $(id).value = ''; });
+      setCategoryOptions($('category-filter'), '', '全部分类');
+      showLedgerMonth(date.slice(0, 7));
+      $('expense-dialog').close();
+      toast('已保存' + config.label);
+    }
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    formButton.disabled = false;
+  }
+};
+
+async function editTransactionRow(button) {
+  const {kind, edit, delete: removeId} = button.dataset;
+  if (edit) {
+    openTransaction(kind, edit);
+    return;
+  }
+  const {collection, label} = transactionKinds[kind];
+  confirmDo('删除这笔' + label + '？', '收支和结余将重新计算。', async () => {
+    if (await change(data => {
+      data[collection] = data[collection].filter(entry => entry.id !== removeId);
+    }, {retainOnFailure: false})) renderLedger();
+  });
+}
+
+$('previous-month').onclick = () => shiftMonth(-1);
+$('next-month').onclick = () => shiftMonth(1);
+$('selected-month').value = selectedMonth;
+$('selected-month').onchange = () => showLedgerMonth($('selected-month').value);
+$('transaction-filter').oninput = () => {
+  setCategoryOptions($('category-filter'), $('transaction-filter').value, '全部分类');
+  renderLedger();
+};
+for (const id of filters.slice(1)) $(id).oninput = renderLedger;
+$('clear-filters').onclick = () => {
+  filters.forEach(id => { $(id).value = ''; });
+  setCategoryOptions($('category-filter'), '', '全部分类');
+  renderLedger();
+};
+setCategoryOptions($('category-filter'), '', '全部分类');
+renderLedger();
 
 const noteImageInput = $('note-image-input');
 const noteImageButton = $('note-image-add');
@@ -626,7 +1104,7 @@ function loadNoteImage(file) {
   });
 }
 
-async function prepareNoteImage(file) {
+async function prepareNoteImage(file, dataLimit = C.noteImageDataLimit) {
   const allowed = /^image\/(?:jpeg|png|webp|gif|avif|heic|heif|bmp|tiff)$/i;
   const hasImageExtension = /\.(?:jpe?g|png|webp|gif|avif|hei[cf]|bmp|tiff?)$/i.test(file.name);
   if (!allowed.test(file.type) && (file.type || !hasImageExtension)) throw Error('请选择相册图片或 JPG、PNG 等常见图片文件');
@@ -644,8 +1122,8 @@ async function prepareNoteImage(file) {
     drawing.drawImage(image, 0, 0, canvas.width, canvas.height);
     for (const quality of [0.85, 0.65, 0.48]) {
       const src = canvas.toDataURL('image/jpeg', quality);
-      if (src.startsWith('data:image/jpeg;base64,') && src.length <= C.noteImageDataLimit) {
-        return {id: uid(), name: file.name.slice(0, 150) || '笔记图片', src};
+      if (src.startsWith('data:image/jpeg;base64,') && src.length <= dataLimit) {
+        return {id: uid(), name: file.name.slice(0, 150) || '图片', src};
       }
     }
   }
@@ -740,6 +1218,206 @@ $('note-image-dialog').addEventListener('close', () => {
   $('note-image-full').removeAttribute('src');
 });
 
+let reminderFilter = 'all';
+let editingReminder = null;
+let editingPhoto = null;
+const reminderList = $('reminder-list');
+const wallInput = $('photo-wall-input');
+const wallButton = $('photo-wall-add');
+
+function showReminderDeadlines() {
+  const now = new Date();
+  const date = localDate(now);
+  const time = [now.getHours(), now.getMinutes()].map(part => String(part).padStart(2, '0')).join(':');
+  const current = date + 'T' + time;
+  for (const deadline of reminderList.querySelectorAll('time')) {
+    const [dueDate, dueTime] = deadline.dateTime.split('T');
+    deadline.textContent = (dueDate === date ? '今天' : dueDate) + ' ' + dueTime;
+    deadline.classList.toggle('past-due', deadline.dateTime <= current && !deadline.closest('.is-done'));
+  }
+}
+
+function renderReminders() {
+  const items = state.reminders ?? [];
+  const remaining = items.filter(item => !item.done).length;
+  $('reminder-summary').textContent = remaining + ' 项待完成';
+  const filtered = items.filter(item =>
+    reminderFilter === 'all' || (reminderFilter === 'done') === item.done
+  ).sort((a, b) => Number(a.done) - Number(b.done) || (a.due || '∞').localeCompare(b.due || '∞'));
+  reminderList.innerHTML = filtered.map(item => `
+    <li class="reminder-row ${item.done ? 'is-done' : ''}">
+      <input type="checkbox" class="reminder-check" data-reminder-check="${esc(item.id)}"
+        aria-label="${item.done ? '取消完成' : '标记完成'} ${esc(item.title)}" ${item.done ? 'checked' : ''}>
+      <button type="button" class="reminder-title" data-reminder-edit="${esc(item.id)}"
+        aria-label="编辑 ${esc(item.title)}" title="${esc(item.title)}">${esc(item.title)}</button>
+      ${item.due ? `<time datetime="${item.due}" title="${item.due.replace('T', ' ')}"></time>` : ''}
+    </li>`).join('') || '<li class="collection-empty">这个列表里还没有事项。</li>';
+  for (const button of document.querySelectorAll('[data-reminder-filter]')) {
+    button.setAttribute('aria-pressed', String(button.dataset.reminderFilter === reminderFilter));
+  }
+  showReminderDeadlines();
+}
+
+$('reminder-add-form').onsubmit = async event => {
+  event.preventDefault();
+  const input = $('reminder-quick-title');
+  const title = input.value.trim();
+  if (!title) return;
+  const submit = event.currentTarget?.querySelector('button');
+  if (submit?.disabled) return;
+  if (submit) submit.disabled = true;
+  try {
+    const saved = await change(data => {
+      (data.reminders ??= []).push({id: uid(), title, due: '', done: false});
+    }, {retainOnFailure: false});
+    if (saved) {
+      if (input.value.trim() === title) input.value = '';
+      if (reminderFilter === 'done') reminderFilter = 'open';
+      renderReminders();
+    }
+  } finally {
+    if (submit) submit.disabled = false;
+  }
+};
+
+for (const button of document.querySelectorAll('[data-reminder-filter]')) {
+  button.onclick = () => {
+    reminderFilter = button.dataset.reminderFilter;
+    renderReminders();
+  };
+}
+
+reminderList.onchange = async event => {
+  const input = event.target.closest('[data-reminder-check]');
+  if (!input) return;
+  input.disabled = true;
+  await change(data => {
+    const item = (data.reminders ?? []).find(entry => entry.id === input.dataset.reminderCheck);
+    if (item) item.done = input.checked;
+  }, {retainOnFailure: false});
+  renderReminders();
+};
+
+reminderList.onclick = event => {
+  const button = event.target.closest('[data-reminder-edit]');
+  if (!button) return;
+  const item = (state.reminders ?? []).find(entry => entry.id === button.dataset.reminderEdit);
+  if (!item) return;
+  editingReminder = item.id;
+  $('reminder-edit-title').value = item.title;
+  $('reminder-edit-due').value = item.due;
+  $('reminder-dialog').showModal();
+};
+
+$('reminder-edit-form').onsubmit = async event => {
+  event.preventDefault();
+  const title = $('reminder-edit-title').value.trim();
+  const due = $('reminder-edit-due').value;
+  if (!title) return toast('请输入事项名称');
+  if (due && !C.validDateTime(due)) return toast('请选择有效的日期和时间');
+  const id = editingReminder;
+  if (await change(data => {
+    const item = data.reminders.find(entry => entry.id === id);
+    if (item) Object.assign(item, {title, due});
+  }, {retainOnFailure: false})) {
+    $('reminder-dialog').close();
+    renderReminders();
+  }
+};
+
+$('reminder-delete').onclick = () => {
+  const id = editingReminder;
+  $('reminder-dialog').close();
+  confirmDo('删除这条提醒？', '这条提醒会从清单移除。', async () => {
+    if (await change(data => {
+      data.reminders = data.reminders.filter(item => item.id !== id);
+    }, {retainOnFailure: false})) renderReminders();
+  });
+};
+
+function renderPhotoWall() {
+  const photos = state.photos ?? [];
+  $('photo-wall-count').textContent = photos.length + ' 张照片';
+  $('photo-wall-empty').hidden = photos.length > 0;
+  wallButton.disabled = wallInput.disabled || photos.length >= C.photoWallLimit;
+  $('photo-wall-grid').innerHTML = [...photos].reverse().map(photo => `
+    <button type="button" class="photo-wall-tile" data-wall-photo="${esc(photo.id)}"
+      aria-label="查看照片 ${esc(photo.caption || photo.name)}">
+      <img src="${photo.src}" alt="${esc(photo.caption || photo.name)}" loading="lazy">
+      ${photo.caption ? `<span>${esc(photo.caption)}</span>` : ''}
+    </button>`).join('');
+}
+
+wallButton.onclick = () => wallInput.click();
+wallInput.onchange = async () => {
+  const files = Array.from(wallInput.files ?? []);
+  wallInput.value = '';
+  if (!files.length) return;
+  if ((state.photos?.length ?? 0) + files.length > C.photoWallLimit) {
+    toast('照片墙最多可放 ' + C.photoWallLimit + ' 张，请减少本次选择的照片');
+    return;
+  }
+  wallButton.disabled = wallInput.disabled = true;
+  wallButton.textContent = '正在处理…';
+  try {
+    const photos = [];
+    const date = localDate();
+    for (const file of files) {
+      const image = await prepareNoteImage(file, 155000);
+      photos.push({...image, caption: '', date});
+    }
+    if (await change(data => {
+      (data.photos ??= []).push(...photos);
+    }, {retainOnFailure: false})) toast('已添加 ' + photos.length + ' 张照片');
+  } catch (error) {
+    toast(error.message || '无法添加照片');
+  } finally {
+    wallInput.disabled = false;
+    wallButton.textContent = '＋ 添加照片';
+    renderPhotoWall();
+  }
+};
+
+$('photo-wall-grid').onclick = event => {
+  const button = event.target.closest('[data-wall-photo]');
+  if (!button) return;
+  const photo = state.photos.find(item => item.id === button.dataset.wallPhoto);
+  if (!photo) return;
+  editingPhoto = photo.id;
+  const image = $('photo-wall-full');
+  image.src = photo.src;
+  image.alt = photo.caption || photo.name;
+  $('photo-wall-caption').value = photo.caption;
+  $('photo-wall-dialog').showModal();
+};
+
+$('photo-wall-dialog').addEventListener('close', () => $('photo-wall-full').removeAttribute('src'));
+$('photo-wall-edit-form').onsubmit = async event => {
+  event.preventDefault();
+  const id = editingPhoto;
+  const caption = $('photo-wall-caption').value.trim();
+  if (await change(data => {
+    const photo = data.photos.find(entry => entry.id === id);
+    if (photo) photo.caption = caption;
+  }, {retainOnFailure: false})) {
+    $('photo-wall-dialog').close();
+    renderPhotoWall();
+  }
+};
+
+$('photo-wall-delete').onclick = () => {
+  const id = editingPhoto;
+  $('photo-wall-dialog').close();
+  confirmDo('移除这张照片？', '照片会从照片墙移除。', async () => {
+    if (await change(data => {
+      data.photos = data.photos.filter(photo => photo.id !== id);
+    }, {retainOnFailure: false})) renderPhotoWall();
+  });
+};
+renderReminders();
+renderPhotoWall();
+setInterval(showReminderDeadlines, 30000);
+
 const defaultSpace=()=>({tools:[],projects:[],profile:{name:'',bio:'',experience:'',works:''}});
 function validateSpace(v){if(!v||!Array.isArray(v.tools)||!Array.isArray(v.projects)||!v.profile)throw Error('个人空间数据格式错误');for(const key of ['tools','projects']){const ids=new Set();for(const x of v[key]){if(!x||typeof x.id!=='string'||!x.id||ids.has(x.id)||typeof x.title!=='string'||x.title.length>120||typeof x.description!=='string'||x.description.length>10000||typeof x.url!=='string'||(x.url&&!validUrl(x.url)))throw Error('工具或项目数据无效');ids.add(x.id);if(key==='tools'&&(typeof x.category!=='string'||x.category.length>60))throw Error('分类无效');if(key==='projects'&&!['想法','进行中','已上线','已归档'].includes(x.status))throw Error('项目状态无效')}}for(const k of ['name','bio','experience','works'])if(typeof v.profile[k]!=='string'||v.profile[k].length>20000)throw Error('个人资料无效');return v}
 function space(){return state.space||defaultSpace()}
@@ -747,7 +1425,7 @@ function validUrl(s){try{return ['https:','http:'].includes(new URL(s).protocol)
 const nav=document.querySelector('nav');nav.insertAdjacentHTML('afterbegin','<button data-view="home"><span>⌂</span>空间首页</button><button data-view="tools"><span>◇</span>工具导航</button><button data-view="projects"><span>◈</span>项目与想法</button><button data-view="assistant"><span>✳</span>关于我 · 助手</button>');
 const heading=(eyebrow,title,subtitle,button='')=>`<div class="page-heading"><div><div class="eyebrow">${eyebrow}</div><h1>${title}<span>${subtitle}</span></h1></div>${button}</div>`;
 const main=document.querySelector('main');
-main.insertAdjacentHTML('afterbegin',`<section id="home-view" hidden>${heading('A PLACE FOR EVERYTHING THAT MATTERS','我的日常空间','收好常用工具，安放想法，认真生活。')}<div class="welcome-panel"><div><span class="eyebrow">YOUR OWN LITTLE CORNER</span><h2>让灵感有去处，<br>让生活有记录。</h2><p>从一个小小的想法开始，慢慢搭建属于自己的世界。</p><button class="primary" data-go="projects">记录一个新想法 ↗</button></div><div class="orbit-art" aria-hidden="true"><span>✳</span><i></i><b>日 常</b></div></div><div class="home-grid"><button class="panel home-link" data-go="tools"><span>◇</span><h2>工具导航 ↗</h2><p>把好用的网站，放在触手可及的地方。</p><small id="home-tools"></small></button><button class="panel home-link" data-go="projects"><span>◈</span><h2>项目与创业想法 ↗</h2><p>从灵光一现，到一步步成为现实。</p><small id="home-projects"></small></button><button class="panel home-link" data-go="ledger"><span>▦</span><h2>生活账本 ↗</h2><p>每一笔小花销，都值得清楚记录。</p><small id="home-expenses"></small></button><button class="panel home-link" data-go="notes"><span>▤</span><h2>随手记事本 ↗</h2><p>待办、灵感、心情，随时写下来。</p><small id="home-notes"></small></button></div><div class="home-bottom"><span>✳ 一个持续生长的个人空间</span><button class="text-button" data-go="assistant">了解我 / 资料问答 →</button></div></section>
+main.insertAdjacentHTML('afterbegin',`<section id="home-view" hidden>${heading('A PLACE FOR EVERYTHING THAT MATTERS','我的日常空间','收好常用工具，安放想法，认真生活。')}<div class="welcome-panel"><div><span class="eyebrow">YOUR OWN LITTLE CORNER</span><h2>让灵感有去处，<br>让生活有记录。</h2><p>从一个小小的想法开始，慢慢搭建属于自己的世界。</p><button class="primary" data-go="projects">记录一个新想法 ↗</button></div><div class="orbit-art" aria-hidden="true"><span>✳</span><i></i><b>日 常</b></div></div><div class="home-grid"><button class="panel home-link" data-go="tools"><span>◇</span><h2>工具导航 ↗</h2><p>把好用的网站，放在触手可及的地方。</p><small id="home-tools"></small></button><button class="panel home-link" data-go="projects"><span>◈</span><h2>项目与创业想法 ↗</h2><p>从灵光一现，到一步步成为现实。</p><small id="home-projects"></small></button><button class="panel home-link" data-go="ledger"><span>▦</span><h2>生活账本 ↗</h2><p>每一笔小花销，都值得清楚记录。</p><small id="home-expenses"></small></button><button class="panel home-link" data-go="notes"><span>▤</span><h2>随手记事本 ↗</h2><p>待办、灵感、心情，随时写下来。</p><small id="home-notes"></small></button><button class="panel home-link" data-go="reminders"><span>◉</span><h2>提醒事项 ↗</h2><p>一行一件事，完成就勾选。</p></button><button class="panel home-link" data-go="photos"><span>▧</span><h2>照片墙 ↗</h2><p>收好想留住的照片。</p></button></div><div class="home-bottom"><span>✳ 一个持续生长的个人空间</span><button class="text-button" data-go="assistant">了解我 / 资料问答 →</button></div></section>
 <section id="tools-view" hidden>${heading('GOOD TOOLS, WITHIN REACH','工具导航','常用的、喜欢的，都在这里。','<button class="primary" id="add-tool">＋ 收藏工具</button>')}<div class="space-filters"><input id="tool-search" placeholder="搜索名称、描述或分类…" aria-label="搜索工具"><select id="tool-category" aria-label="筛选工具分类"><option value="">全部分类</option></select></div><div class="card-grid" id="tool-grid"></div></section>
 <section id="projects-view" hidden>${heading('SMALL IDEAS, REAL POSSIBILITIES','项目与想法','为创业灵感留个位置，也记录每一步进展。','<button class="primary" id="add-project">＋ 新建项目</button>')}<div class="space-filters"><input id="project-search" placeholder="搜索项目和想法…" aria-label="搜索项目"><select id="project-status" aria-label="筛选项目状态"><option value="">全部状态</option><option>想法</option><option>进行中</option><option>已上线</option><option>已归档</option></select></div><div class="card-grid" id="project-grid"></div></section>
 <section id="assistant-view" hidden>${heading('THE STORY BEHIND THE WORK','关于我 · 资料助手','用真实的经历和作品，介绍自己。','<button class="soft" id="edit-profile">✎ 编辑个人资料</button>')}<div class="assistant-layout"><article class="panel profile-panel"><div class="profile-avatar">我</div><h2 id="profile-name"></h2><p id="profile-bio"></p><h3>个人经历</h3><div id="profile-experience" class="profile-text"></div><h3>作品与成果</h3><div id="profile-works" class="profile-text"></div></article><article class="panel chat-panel"><div class="panel-title"><h3>✳ 关于我的资料问答</h3><span>本地检索 · 无 AI 模型</span></div><p class="chat-info">依据个人资料与项目关键词查找原文。仅在解锁后的本浏览器运行，不上传个人资料。</p><div id="chat-log" role="log" aria-live="polite"><div class="chat-message bot">你好！可以问我有关个人经历、作品或项目的问题。先在「编辑个人资料」里添加真实信息，我就能帮助查找。</div></div><div class="suggestions"><button data-question="有哪些个人经历？">个人经历</button><button data-question="有哪些作品和项目？">作品与项目</button></div><form id="chat-form"><input id="chat-input" placeholder="想了解什么？" maxlength="500" aria-label="问题" required><button class="primary">发送 ↑</button></form></article></div></section>`);
@@ -767,11 +1445,55 @@ document.querySelector('.brand').onclick=e=>{e.preventDefault();showView('home')
 renderSpace();showView('home');
 
 $('backup-button').onclick=()=>$('backup-dialog').showModal();
-$('export-json').onclick=()=>confirmDo('导出明文完整备份？','JSON 包含全部账单、笔记及个人资料，请只存放在你信任的位置。加密备份更适合长期保存。',()=>download(JSON.stringify(state,null,2),'application/json',`日常完整备份-${localDate()}.json`));
-$('export-csv').onclick=()=>confirmDo('导出明文账单？','CSV 只包含账单，不包含笔记和个人资料；不能替代完整 JSON 备份。',()=>download(DailyData.csv(state),'text/csv;charset=utf-8',`日常账单-${localDate()}.csv`));
+$('export-json').onclick=()=>confirmDo('导出明文完整备份？','JSON 包含全部收支、笔记、提醒、照片及个人资料，请只存放在你信任的位置。加密备份更适合长期保存。',()=>download(JSON.stringify(state,null,2),'application/json',`日常完整备份-${localDate()}.json`));
+$('export-csv').onclick=()=>confirmDo('导出明文账单？','CSV 只包含账单，不包含笔记、提醒、照片及个人资料；不能替代完整 JSON 备份。',()=>download(DailyData.csv(state),'text/csv;charset=utf-8',`日常账单-${localDate()}.csv`));
 $('export-encrypted').onclick=async()=>{try{await mutationQueue;await VaultUI.flush();download(VaultUI.encryptedBackup(),'application/json',`日常加密备份-${localDate()}.json`)}catch(e){toast('加密备份失败，请导出当前明文 JSON：'+e.message)}};
-$('import-json').onchange=async()=>{const file=$('import-json').files[0];$('import-json').value='';if(!file)return;try{const incoming=await VaultUI.readBackup(file),isCsv=file.name.toLowerCase().endsWith('.csv');const audit=await DailyData.audit(incoming);confirmDo('导入并核对这份备份？',`支出 ${audit.expenses} 笔，笔记 ${audit.notes} 篇，工具 ${audit.tools} 个，项目 ${audit.projects} 个。支出总额 ${money(audit.totalCents)}。${isCsv?'CSV 没有原始 ID，每次导入都会新增账单，请勿重复导入。':'同 ID 的支出与笔记以备份为准；个人空间资料如存在则整组替换。'}`,async()=>{let expected;if(await change(s=>{expected=DailyData.merge(s,incoming);Object.keys(s).forEach(k=>delete s[k]);Object.assign(s,expected)})){renderLedger();selectNote(null);renderSpace();const after=await DailyData.audit(state);$('migration-report').textContent=`导入完成并已加密保存。\n支出：${after.expenses} 笔；笔记：${after.notes} 篇\n工具：${after.tools} 个；项目：${after.projects} 个\n全部支出：${money(after.totalCents)}\n完整数据 SHA-256：\n${after.sha256}\n${DailyData.fingerprint(state)===DailyData.fingerprint(expected)?'内存数据与预期合并结果一致。':'数据已发生后续修改，请重新核对。'}`;toast('已导入并生成核对结果')}})}catch(e){toast('导入失败：'+e.message)}};
-$('audit-data').onclick=async()=>{const a=await DailyData.audit(state);$('migration-report').textContent=`支出 ${a.expenses} 笔；笔记 ${a.notes} 篇\n工具 ${a.tools} 个；项目 ${a.projects} 个\n总支出：${money(a.totalCents)}\n完整数据 SHA-256：\n${a.sha256}`};
+function describeAudit(audit) {
+  return [
+    '收入：' + audit.incomes + ' 笔 · ' + money(audit.incomeCents),
+    '支出：' + audit.expenses + ' 笔 · ' + money(audit.totalCents),
+    '结余：' + money(audit.balanceCents),
+    '笔记：' + audit.notes + ' 篇 · 提醒：' + audit.reminders + ' 条 · 照片墙：' + audit.photos + ' 张',
+    '工具：' + audit.tools + ' 个 · 项目：' + audit.projects + ' 个',
+    '完整数据 SHA-256：',
+    audit.sha256,
+  ].join('\n');
+}
+$('import-json').onchange = async () => {
+  const input = $('import-json');
+  const file = input.files[0];
+  input.value = '';
+  if (!file) return;
+  try {
+    const incoming = await VaultUI.readBackup(file);
+    const isCsv = file.name.toLowerCase().endsWith('.csv');
+    const audit = await DailyData.audit(incoming);
+    const count = '收入 ' + audit.incomes + ' 笔，支出 ' + audit.expenses + ' 笔。';
+    const message = isCsv
+      ? count + ' 每次导入 CSV 都会新增账单，请勿重复导入。'
+      : count + ' 笔记 ' + audit.notes + ' 篇，提醒 ' + audit.reminders + ' 条，照片墙 ' + audit.photos + ' 张。相同 ID 的记录以备份为准。';
+    confirmDo('导入并核对这份备份？', message, async () => {
+      try {
+        if (await change(current => Object.assign(current, DailyData.merge(current, incoming)), {retainOnFailure: false})) {
+          renderLedger();
+          selectNote(null);
+          renderSpace();
+          renderReminders();
+          renderPhotoWall();
+          $('migration-report').textContent = '导入完成并已加密保存。\n' + describeAudit(await DailyData.audit(state));
+          toast('已导入并生成核对结果');
+        }
+      } catch (error) {
+        toast('导入失败：' + error.message);
+      }
+    });
+  } catch (error) {
+    toast('导入失败：' + error.message);
+  }
+};
+$('audit-data').onclick = async () => {
+  $('migration-report').textContent = describeAudit(await DailyData.audit(state));
+};
 $('export-audit').onclick=async()=>download(JSON.stringify(await DailyData.audit(state),null,2),'application/json',`日常数据核对-${localDate()}.json`);
 $('change-password').onclick=()=>{$('new-vault-password').value=$('new-vault-repeat').value='';$('change-password-dialog').showModal()};
 $('change-password-form').onsubmit=async e=>{e.preventDefault();const pass=$('new-vault-password').value;if(pass!==$('new-vault-repeat').value)return toast('两次新口令不一致');try{await mutationQueue;await VaultUI.rekey(state,pass);$('new-vault-password').value=$('new-vault-repeat').value='';$('change-password-dialog').close();toast('保险箱口令已更换；旧备份仍使用旧口令')}catch(e){toast(e.message)}};
